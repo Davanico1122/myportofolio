@@ -1,4 +1,4 @@
-/* Custom scrollbar for dark mode */
+/* Custom Scrollbar for Dark Mode */
 body::-webkit-scrollbar {
   width: 8px;
 }
@@ -11,4 +11,143 @@ body::-webkit-scrollbar-thumb {
   border: 2px solid #1e293b;
 }
 
-/* Additional custom styles can be added below */
+/* Root variables for colors (extend as needed) */
+:root {
+  --color-primary: #8b5cf6;
+  --color-primary-dark: #7c3aed;
+  --color-secondary: #ec4899;
+  --color-text-light: #ffffff;
+  --color-text-dark: #1e293b;
+  --color-bg-light: #f9fafb;
+  --color-bg-dark: #111827;
+  --transition-fast: 0.3s ease-in-out;
+}
+
+/* General font and body */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--color-bg-light);
+  color: var(--color-text-dark);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.dark {
+  background-color: var(--color-bg-dark);
+  color: var(--color-text-light);
+}
+
+/* Headings styling */
+h1, h2, h3, h4, h5 {
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--color-primary-dark);
+}
+
+body.dark h1, 
+body.dark h2, 
+body.dark h3, 
+body.dark h4, 
+body.dark h5 {
+  color: var(--color-primary);
+}
+
+/* Links styling */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover,
+a:focus {
+  color: var(--color-secondary);
+  outline: none;
+}
+
+/* Buttons styling */
+button, .btn {
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+  font-weight: 600;
+  border: none;
+  border-radius: 9999px; /* pill shape */
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+  box-shadow: 0 4px 8px rgba(139, 92, 246, 0.35);
+}
+
+button:hover, 
+button:focus, 
+.btn:hover, 
+.btn:focus {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  outline: none;
+  box-shadow: 0 8px 16px rgba(139, 92, 246, 0.45);
+}
+
+/* Sections with spacing */
+section {
+  padding: 3rem 0;
+}
+
+/* Cards styling for project items */
+article {
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.1);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  background-color: var(--color-bg-light);
+  color: var(--color-text-dark);
+}
+
+body.dark article {
+  background-color: #1f2937;
+  color: var(--color-text-light);
+  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
+}
+
+article:hover, article:focus {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(139, 92, 246, 0.5);
+  outline: none;
+}
+
+/* Skill badges */
+ul li {
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+  cursor: default;
+}
+
+ul li:hover, ul li:focus {
+  background-color: var(--color-secondary);
+  color: var(--color-text-light);
+  transform: scale(1.05);
+  outline: none;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Utility for fade-in animation on scroll (optional) */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
