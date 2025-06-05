@@ -1,1 +1,14 @@
+/* Custom scrollbar for dark mode */
+body::-webkit-scrollbar {
+  width: 8px;
+}
+body::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #8b5cf6;
+  border-radius: 9999px;
+  border: 2px solid #1e293b;
+}
 
+/* Additional custom styles can be added below */
