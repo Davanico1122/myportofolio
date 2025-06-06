@@ -18,9 +18,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li>
-                    <button id="theme-toggle" aria-label="Toggle Dark Mode">🌓</button>
-                </li>
+                <li><button id="theme-toggle" aria-label="Toggle Dark Mode">🌓</button></li>
             </ul>
         </div>
     </nav>
@@ -52,19 +50,19 @@
                 <img src="assets/project1.jpg" alt="Project 1" />
                 <h3>Project 1</h3>
                 <p>A responsive and highly functional online store.</p>
-                <a href="#" class="btn-project">🔗 Lihat Proyek</a>
+                <a href="project1.html" class="btn-project">🔗 Lihat Proyek</a>
             </div>
             <div class="project-card" data-aos="zoom-in-up" data-aos-delay="100">
                 <img src="assets/project2.jpg" alt="Project 2" />
                 <h3>Project 2</h3>
                 <p>Minimalistic personal portfolio template.</p>
-                <a href="#" class="btn-project">🔗 Lihat Proyek</a>
+                <a href="project2.html" class="btn-project">🔗 Lihat Proyek</a>
             </div>
             <div class="project-card" data-aos="zoom-in-up" data-aos-delay="200">
                 <img src="assets/project3.jpg" alt="Project 3" />
                 <h3>Project 3</h3>
                 <p>Modern UI/UX design for mobile applications.</p>
-                <a href="#" class="btn-project">🔗 Lihat Proyek</a>
+                <a href="project3.html" class="btn-project">🔗 Lihat Proyek</a>
             </div>
         </section>
 
@@ -83,7 +81,6 @@
     <script>
         AOS.init({ duration: 1000, once: true });
 
-        // Theme Toggle
         const toggleBtn = document.getElementById('theme-toggle');
         toggleBtn.addEventListener('click', () => {
             const html = document.documentElement;
