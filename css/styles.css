@@ -4,17 +4,27 @@
 :root {
   --bg-color: #0d0d0d;
   --text-color: #ffffff;
-  --primary: #8b5cf6;
-  --secondary: #ec4899;
+  --primary-color: #8b5cf6; /* Ganti primary menjadi primary-color untuk kejelasan */
+  --secondary-color: #ec4899; /* Ganti secondary menjadi secondary-color */
   --card-bg: #1a1a1a;
+  --border-color: rgba(255, 255, 255, 0.1); /* Tambahkan warna border */
+  --secondary-text-color: #aaa; /* Tambahkan warna teks sekunder */
+  --button-text-color: #ffffff; /* Warna teks tombol */
+  --link-color: var(--primary-color); /* Warna default untuk link */
+  --link-hover-color: var(--secondary-color); /* Warna link saat hover */
 }
 
 [data-theme="light"] {
   --bg-color: #ffffff;
   --text-color: #0d0d0d;
   --card-bg: #f4f4f4;
-  --primary: #7c3aed;
-  --secondary: #db2777;
+  --primary-color: #7c3aed;
+  --secondary-color: #db2777;
+  --border-color: rgba(0, 0, 0, 0.1);
+  --secondary-text-color: #555;
+  --button-text-color: #ffffff;
+  --link-color: var(--primary-color);
+  --link-hover-color: var(--secondary-color);
 }
 
 body {
@@ -31,6 +41,7 @@ body {
   width: 90%;
   max-width: 1200px;
   margin: auto;
+  padding: 60px 0; /* Memberi padding default untuk section di dalam container */
 }
 
 .navbar {
@@ -42,13 +53,14 @@ body {
   padding: 0.6rem 0;
   z-index: 999;
   transition: top 0.3s;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid var(--border-color); /* Menggunakan variabel */
 }
 
 .navbar .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0; /* Hapus padding default untuk container di navbar */
 }
 
 .logo {
@@ -94,7 +106,7 @@ body {
 .hero h2 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
-  color: var(--primary);
+  color: var(--primary-color);
 }
 
 .hero p {
@@ -103,11 +115,38 @@ body {
   font-size: 1rem;
 }
 
-.projects-section {
-  padding: 4rem 0;
+/* Bagian untuk About dan Skills (untuk konsistensi padding) */
+#about, #skills {
+  padding: 60px 0; /* Konsisten dengan padding container default */
 }
 
-.project-cards {
+#about h2, #skills h2, #projects h2, #contact h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+    color: var(--primary-color);
+}
+
+#skills ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#skills li {
+    background-color: var(--card-bg);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1em;
+    color: var(--text-color);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+.projects-grid { /* Mengganti .project-cards menjadi .projects-grid */
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
@@ -152,8 +191,8 @@ body {
   margin-top: 1.5rem;
   padding: 0.6rem 1.2rem;
   font-size: 0.95rem;
-  background-color: var(--primary);
-  color: var(--text-color);
+  background-color: var(--primary-color); /* Menggunakan primary-color */
+  color: var(--button-text-color);
   border: none;
   border-radius: 5px;
   text-align: center;
@@ -164,19 +203,104 @@ body {
 
 .btn-project.secondary {
   background-color: transparent;
-  border: 1px solid var(--primary);
-  color: var(--primary);
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
 }
 
 .btn-project:hover {
-  background-color: var(--secondary);
+  background-color: var(--secondary-color); /* Menggunakan secondary-color */
 }
+
+/* --- Gaya untuk Bagian Kontak --- */
+#contact {
+    padding: 60px 0; /* Padding atas dan bawah, konsisten dengan section lain */
+    text-align: center;
+}
+
+#contact h2 {
+    margin-bottom: 20px;
+    font-size: 2.2rem; /* Ukuran font judul, konsisten dengan section lain */
+    color: var(--primary-color);
+}
+
+#contact p {
+    margin-bottom: 30px;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.contact-info {
+    margin-top: 30px;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Pusatkan item */
+    gap: 15px; /* Jarak antar baris info kontak */
+}
+
+.contact-info p {
+    margin: 0; /* Hapus margin default pada p di dalam contact-info */
+}
+
+.contact-info a {
+    color: var(--link-color); /* Menggunakan variabel link-color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: var(--link-hover-color); /* Menggunakan variabel link-hover-color */
+    text-decoration: underline;
+}
+
+/* Gaya untuk formulir kontak (jika diaktifkan) */
+.contact-form {
+    max-width: 600px;
+    margin: 40px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box; /* Pastikan padding tidak menambah lebar */
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: var(--secondary-text-color);
+}
+
+.contact-form button.btn-project {
+    background-color: var(--primary-color);
+    color: var(--button-text-color);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button.btn-project:hover {
+    background-color: var(--secondary-color);
+}
+
 
 footer {
   padding: 2rem 0;
   text-align: center;
   font-size: 0.9rem;
-  color: #aaa;
+  color: var(--secondary-text-color); /* Menggunakan variabel */
 }
 
 /* ==== Tambahan untuk halaman detail proyek ==== */
@@ -208,10 +332,10 @@ footer {
 
 .project-description h3 {
   margin-top: 1.5rem;
-  color: var(--primary);
+  color: var(--primary-color);
 }
 
-.skills {
+.skills { /* Ini kemungkinan merujuk pada bagian skills di halaman utama */
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -248,5 +372,10 @@ footer {
 
   .detail-main-image {
     max-height: 250px;
+  }
+
+  /* Penyesuaian untuk contact info di mobile */
+  .contact-info {
+    font-size: 1em;
   }
 }
