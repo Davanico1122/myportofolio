@@ -1,78 +1,78 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Davanico Ady Nugroho - Portofolio</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
-
-  <header class="navbar">
+  <nav class="navbar" id="navbar">
     <div class="container">
-      <h1 class="logo">Davanico Ady Nugroho</h1>
-      <nav>
-        <ul class="nav-menu">
-          <li><a href="#tentang">Tentang</a></li>
-          <li><a href="#keahlian">Keahlian</a></li>
-          <li><a href="#proyek">Proyek</a></li>
-        </ul>
-      </nav>
+      <div class="logo" data-aos="fade-right">Davanico Ady Nugroho</div>
+      <ul class="nav-links">
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#skills">Keahlian</a></li>
+        <li><a href="#projects">Proyek</a></li>
+        <li><button id="theme-toggle">🌓</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero" id="hero">
+    <div class="container" data-aos="fade-up">
+      <h2>Halo, saya Davanico 👋</h2>
+      <p>Seorang web developer dan desainer UI/UX yang fokus pada solusi digital modern.</p>
     </div>
   </header>
 
-  <main>
-    <section id="tentang" class="section hidden">
-      <div class="container">
-        <h2>Tentang Saya</h2>
-        <p>Saya adalah pengembang web yang berdedikasi dengan minat dalam desain minimalis, animasi halus, dan pengalaman pengguna yang interaktif.</p>
-      </div>
-    </section>
+  <section id="about" class="container" data-aos="fade-up">
+    <h2>Tentang Saya</h2>
+    <p>Saya memiliki minat besar dalam membangun website modern, interaktif, dan estetis yang mampu memberikan pengalaman pengguna terbaik.</p>
+  </section>
 
-    <section id="keahlian" class="section hidden">
-      <div class="container">
-        <h2>Keahlian</h2>
-        <ul class="skills-list">
-          <li>HTML, CSS, JavaScript</li>
-          <li>Responsive Web Design</li>
-          <li>UI/UX Minimalis</li>
-        </ul>
-      </div>
-    </section>
+  <section id="skills" class="container skills" data-aos="fade-up">
+    <h2>Keahlian</h2>
+    <ul>
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JavaScript</li>
+      <li>Figma / UI Design</li>
+      <li>GitHub</li>
+    </ul>
+  </section>
 
-    <section id="proyek" class="section hidden">
-      <div class="container">
-        <h2>Proyek</h2>
-        <div class="project-cards">
-          <div class="card hidden">
-            <img src="project1.jpg" alt="Project 1" />
-            <h3>Project 1</h3>
-            <p>Website portofolio dengan desain bersih dan interaktif.</p>
-          </div>
-          <div class="card hidden">
-            <img src="project2.jpg" alt="Project 2" />
-            <h3>Project 2</h3>
-            <p>Aplikasi web dengan fitur parallax dan dark mode.</p>
-          </div>
-          <div class="card hidden">
-            <img src="project3.jpg" alt="Project 3" />
-            <h3>Project 3</h3>
-            <p>Platform edukasi interaktif dengan tampilan modern.</p>
-          </div>
-        </div>
-        <div class="button-container">
-          <a href="#proyek" class="btn">Lihat Proyek</a>
-        </div>
+  <section id="projects" class="container" data-aos="fade-up">
+    <h2>Proyek</h2>
+    <div class="projects-grid">
+      <div class="project-card" data-aos="fade-up">
+        <img src="assets/project1.jpg" alt="Project 1" />
+        <h3>Website E-Commerce</h3>
+        <p>Desain dan pengembangan platform e-commerce modern dan responsif.</p>
+        <a href="project1.html" class="btn-project">Lihat Detail</a>
       </div>
-    </section>
-  </main>
-
-  <footer class="footer hidden">
-    <div class="container">
-      <p>&copy; 2025 Davanico Ady Nugroho. Semua hak dilindungi.</p>
+      <div class="project-card" data-aos="fade-up">
+        <img src="assets/project2.jpg" alt="Project 2" />
+        <h3>Portofolio Pribadi</h3>
+        <p>Template portofolio pribadi modern dan interaktif.</p>
+        <a href="project2.html" class="btn-project">Lihat Detail</a>
+      </div>
+      <div class="project-card" data-aos="fade-up">
+        <img src="assets/project3.jpg" alt="Project 3" />
+        <h3>UI/UX Aplikasi Mobile</h3>
+        <p>Studi desain UI/UX untuk aplikasi mobile modern.</p>
+        <a href="project3.html" class="btn-project">Lihat Detail</a>
+      </div>
     </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Davanico Ady Nugroho</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ duration: 1000, once: true });</script>
 </body>
 </html>
