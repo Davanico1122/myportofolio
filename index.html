@@ -1,26 +1,31 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" data-theme="light">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portofolio Davanico Ady Nugroho</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 
 <body>
     <nav class="navbar">
         <div class="container">
-            <h1 class="logo">Davanico Ady Nugroho</h1>
-            <ul class="nav-links">
+            <h1 class="logo" data-aos="fade-right">Davanico Ady Nugroho</h1>
+            <ul class="nav-links" data-aos="fade-left">
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li>
+                    <button id="theme-toggle" aria-label="Toggle Dark Mode">🌓</button>
+                </li>
             </ul>
         </div>
     </nav>
 
-    <header class="hero">
+    <header class="hero" data-aos="fade-up">
         <div class="container">
             <h2>Hi, I'm <span class="highlight">Davanico Ady Nugroho</span></h2>
             <p>Frontend Developer & UI Designer passionate about crafting interactive, responsive, and beautiful web experiences.</p>
@@ -28,11 +33,11 @@
     </header>
 
     <main class="container">
-        <section id="about">
+        <section id="about" data-aos="fade-up">
             <h2>About Me</h2>
             <p>Hello! I'm a frontend developer focused on creating sleek, responsive user interfaces and seamless user experiences.</p>
             <h3>Skills</h3>
-            <ul class="skills">
+            <ul class="skills" data-aos="fade-up" data-aos-delay="200">
                 <li>HTML</li>
                 <li>CSS</li>
                 <li>JavaScript</li>
@@ -41,39 +46,51 @@
             </ul>
         </section>
 
-        <section id="projects">
+        <section id="projects" data-aos="fade-up">
             <h2>My Projects</h2>
-            <div class="project-card">
+            <div class="project-card" data-aos="zoom-in-up">
                 <img src="assets/project1.jpg" alt="Project 1" />
                 <h3>Project 1</h3>
                 <p>A responsive and highly functional online store.</p>
-                <button class="view-project">Lihat Proyek</button>
+                <a href="#" class="btn-project">🔗 Lihat Proyek</a>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-aos="zoom-in-up" data-aos-delay="100">
                 <img src="assets/project2.jpg" alt="Project 2" />
                 <h3>Project 2</h3>
                 <p>Minimalistic personal portfolio template.</p>
-                <button class="view-project">Lihat Proyek</button>
+                <a href="#" class="btn-project">🔗 Lihat Proyek</a>
             </div>
-            <div class="project-card">
+            <div class="project-card" data-aos="zoom-in-up" data-aos-delay="200">
                 <img src="assets/project3.jpg" alt="Project 3" />
                 <h3>Project 3</h3>
                 <p>Modern UI/UX design for mobile applications.</p>
-                <button class="view-project">Lihat Proyek</button>
+                <a href="#" class="btn-project">🔗 Lihat Proyek</a>
             </div>
         </section>
 
-        <section id="contact">
+        <section id="contact" data-aos="fade-up">
             <h2>Contact</h2>
             <p>Email: <a href="mailto:davanico@example.com">davanico@example.com</a></p>
         </section>
     </main>
 
-    <footer>
+    <footer data-aos="fade-up">
         <p>&copy; 2025 Davanico Ady Nugroho. All rights reserved.</p>
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        // Dark Mode Toggle
+        const toggleBtn = document.getElementById('theme-toggle');
+        toggleBtn.addEventListener('click', () => {
+            const html = document.documentElement;
+            const currentTheme = html.getAttribute('data-theme');
+            html.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
+        });
+    </script>
 </body>
 
 </html>
