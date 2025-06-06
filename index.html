@@ -1,68 +1,78 @@
-<!DOCTYPE html><html lang="id" data-theme="light"><head>
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Davanico | Portofolio</title>
+  <title>Davanico Ady Nugroho - Portofolio</title>
   <link rel="stylesheet" href="css/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-</head><body>
+</head>
+<body>
   <nav class="navbar" id="navbar">
     <div class="container">
-      <h1 class="logo" data-aos="fade-right">Davanico Ady Nugroho</h1>
+      <div class="logo" data-aos="fade-right">Davanico Ady Nugroho</div>
       <ul class="nav-links">
         <li><a href="#about">Tentang</a></li>
+        <li><a href="#skills">Keahlian</a></li>
         <li><a href="#projects">Proyek</a></li>
-        <li><button id="theme-toggle" aria-label="Toggle Dark Mode">🌓</button></li>
+        <li><button id="theme-toggle">🌓</button></li>
       </ul>
     </div>
-  </nav>  <header class="hero container" data-aos="fade-up">
-    <h2>Halo, Saya <span class="highlight">Davanico</span>!</h2>
-    <p>Web Developer & Desainer UI/UX</p>
-  </header>  <section id="about" class="about container" data-aos="fade-up">
+  </nav>
+
+  <header class="hero" id="hero">
+    <div class="container" data-aos="fade-up">
+      <h2>Halo, saya Davanico 👋</h2>
+      <p>Seorang web developer dan desainer UI/UX yang fokus pada solusi digital modern.</p>
+    </div>
+  </header>
+
+  <section id="about" class="container" data-aos="fade-up">
     <h2>Tentang Saya</h2>
-    <p>Saya adalah seorang pengembang web yang fokus pada pembuatan antarmuka pengguna modern, responsif, dan elegan. Dengan pengalaman dalam HTML, CSS, dan JavaScript, saya menciptakan pengalaman digital yang menarik dan fungsional.</p>
-  </section>  <section id="skills" class="skills container" data-aos="fade-up">
+    <p>Saya memiliki minat besar dalam membangun website modern, interaktif, dan estetis yang mampu memberikan pengalaman pengguna terbaik.</p>
+  </section>
+
+  <section id="skills" class="container skills" data-aos="fade-up">
     <h2>Keahlian</h2>
     <ul>
       <li>HTML5</li>
       <li>CSS3</li>
       <li>JavaScript</li>
-      <li>UI/UX Design</li>
-      <li>Figma</li>
+      <li>Figma / UI Design</li>
+      <li>GitHub</li>
     </ul>
-  </section>  <section id="projects" class="projects container" data-aos="fade-up">
-    <h2>Proyek Saya</h2>
-    <div class="project-grid">
+  </section>
+
+  <section id="projects" class="container" data-aos="fade-up">
+    <h2>Proyek</h2>
+    <div class="projects-grid">
       <div class="project-card" data-aos="fade-up">
         <img src="assets/project1.jpg" alt="Project 1" />
-        <h3>My Design (E-Commerce)</h3>
-        <p>Website e-commerce modern dengan tampilan elegan dan responsif.</p>
+        <h3>Website E-Commerce</h3>
+        <p>Desain dan pengembangan platform e-commerce modern dan responsif.</p>
         <a href="project1.html" class="btn-project">Lihat Detail</a>
       </div>
-      <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+      <div class="project-card" data-aos="fade-up">
         <img src="assets/project2.jpg" alt="Project 2" />
         <h3>Portofolio Pribadi</h3>
-        <p>Template portofolio pribadi yang bersih dan profesional.</p>
+        <p>Template portofolio pribadi modern dan interaktif.</p>
         <a href="project2.html" class="btn-project">Lihat Detail</a>
       </div>
-      <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+      <div class="project-card" data-aos="fade-up">
         <img src="assets/project3.jpg" alt="Project 3" />
-        <h3>Modern UI/UX Design</h3>
-        <p>Desain aplikasi mobile dengan pendekatan UI/UX modern dan interaktif.</p>
+        <h3>UI/UX Aplikasi Mobile</h3>
+        <p>Studi desain UI/UX untuk aplikasi mobile modern.</p>
         <a href="project3.html" class="btn-project">Lihat Detail</a>
       </div>
     </div>
-  </section>  <footer data-aos="fade-up">
-    <p>&copy; 2025 Davanico Ady Nugroho. All rights reserved.</p>
-  </footer>  <script src="js/script.js"></script>  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>  <script>
-    AOS.init({ duration: 1000, once: true });
+  </section>
 
-    const toggleBtn = document.getElementById('theme-toggle');
-    if (toggleBtn) {
-      toggleBtn.addEventListener('click', () => {
-        const html = document.documentElement;
-        const currentTheme = html.getAttribute('data-theme');
-        html.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
-      });
-    }
-  </script></body></html>
+  <footer>
+    <p>&copy; 2025 Davanico Ady Nugroho</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ duration: 1000, once: true });</script>
+</body>
+</html>
