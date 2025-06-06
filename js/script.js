@@ -1,21 +1,36 @@
-// js/script.js
+// script.js
 
-let lastScrollTop = 0;
-const navbar = document.getElementById("navbar");
-
-if (navbar) {
-  window.addEventListener("scroll", () => {
-    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-    navbar.style.top = currentScroll > lastScrollTop ? "-100px" : "0";
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+// Smooth scroll to sections
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute("href"));
+    if (target) {
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
   });
-}
+});
 
-const toggleBtn = document.getElementById('theme-toggle');
-if (toggleBtn) {
-  toggleBtn.addEventListener('click', () => {
-    const html = document.documentElement;
-    const currentTheme = html.getAttribute('data-theme');
-    html.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
+// Scroll animation with Intersection Observer
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('show');
+    }
+  });
+});
+
+document.querySelectorAll('.hidden').forEach(el => observer.observe(el));
+
+// Optional: Hamburger menu toggle (if you add it in HTML)
+const toggleMenu = document.querySelector('.menu-toggle');
+const navMenu = document.querySelector('.nav-menu');
+
+if (toggleMenu && navMenu) {
+  toggleMenu.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
   });
 }
