@@ -1,153 +1,115 @@
-/* Custom Scrollbar for Dark Mode */
-body::-webkit-scrollbar {
-  width: 8px;
-}
-body::-webkit-scrollbar-track {
-  background: #1e293b;
-}
-body::-webkit-scrollbar-thumb {
-  background-color: #8b5cf6;
-  border-radius: 9999px;
-  border: 2px solid #1e293b;
-}
+/* styles.css */
 
-/* Root variables for colors (extend as needed) */
-:root {
-  --color-primary: #8b5cf6;
-  --color-primary-dark: #7c3aed;
-  --color-secondary: #ec4899;
-  --color-text-light: #ffffff;
-  --color-text-dark: #1e293b;
-  --color-bg-light: #f9fafb;
-  --color-bg-dark: #111827;
-  --transition-fast: 0.3s ease-in-out;
-}
-
-/* General font and body */
+/* Global Styles */
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: var(--color-bg-light);
-  color: var(--color-text-dark);
-  transition: background-color var(--transition-fast), color var(--transition-fast);
-  line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0d0d0d;
+    color: #ffffff;
+    line-height: 1.6;
 }
 
-body.dark {
-  background-color: var(--color-bg-dark);
-  color: var(--color-text-light);
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
 }
 
-/* Headings styling */
-h1, h2, h3, h4, h5 {
-  font-weight: 700;
-  line-height: 1.2;
-  color: var(--color-primary-dark);
+/* Navbar Styles */
+.navbar {
+    background-color: #1a1a1a;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
 }
 
-body.dark h1, 
-body.dark h2, 
-body.dark h3, 
-body.dark h4, 
-body.dark h5 {
-  color: var(--color-primary);
+.navbar .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
 }
 
-/* Links styling */
-a {
-  color: var(--color-primary);
-  text-decoration: none;
-  transition: color var(--transition-fast);
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
 }
 
-a:hover,
-a:focus {
-  color: var(--color-secondary);
-  outline: none;
+.nav-links li {
+    margin-left: 2rem;
 }
 
-/* Buttons styling */
-button, .btn {
-  background-color: var(--color-primary);
-  color: var(--color-text-light);
-  font-weight: 600;
-  border: none;
-  border-radius: 9999px; /* pill shape */
-  padding: 0.5rem 1.5rem;
-  cursor: pointer;
-  transition: background-color var(--transition-fast), transform var(--transition-fast);
-  box-shadow: 0 4px 8px rgba(139, 92, 246, 0.35);
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-button:hover, 
-button:focus, 
-.btn:hover, 
-.btn:focus {
-  background-color: var(--color-primary-dark);
-  transform: translateY(-2px);
-  outline: none;
-  box-shadow: 0 8px 16px rgba(139, 92, 246, 0.45);
+.nav-links a:hover {
+    color: #8b5cf6;
 }
 
-/* Sections with spacing */
-section {
-  padding: 3rem 0;
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 10rem 0;
+    background: url('assets/hero-bg.jpg') no-repeat center center/cover;
+    color: #ffffff;
 }
 
-/* Cards styling for project items */
-article {
-  border-radius: 1.5rem;
-  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.1);
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
-  background-color: var(--color-bg-light);
-  color: var(--color-text-dark);
+.hero h2 {
+    font-size: 3rem;
 }
 
-body.dark article {
-  background-color: #1f2937;
-  color: var(--color-text-light);
-  box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4);
+.highlight {
+    color: #ec4899;
 }
 
-article:hover, article:focus {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 15px 40px rgba(139, 92, 246, 0.5);
-  outline: none;
+/* Main Section */
+main {
+    padding: 5rem 0;
 }
 
-/* Skill badges */
-ul li {
-  transition: background-color var(--transition-fast), color var(--transition-fast);
-  cursor: default;
-}
-
-ul li:hover, ul li:focus {
-  background-color: var(--color-secondary);
-  color: var(--color-text-light);
-  transform: scale(1.05);
-  outline: none;
-}
-
-/* Responsive typography */
-@media (max-width: 768px) {
-  h1 {
+h2 {
     font-size: 2.5rem;
-  }
-  h2 {
-    font-size: 2rem;
-  }
+    margin-bottom: 1rem;
 }
 
-/* Utility for fade-in animation on scroll (optional) */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+.project-card {
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    transition: transform 0.3s;
+    text-align: center;
 }
 
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
+.project-card img {
+    width: 100%;
+    border-radius: 8px;
 }
 
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+.skills {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skills li {
+    background-color: #8b5cf6;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: #1a1a1a;
+}
