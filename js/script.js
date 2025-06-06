@@ -1,18 +1,15 @@
-// script.js
-
-// Menyimpan referensi elemen project
+// === Tombol "Lihat Proyek" ===
 const projectCards = document.querySelectorAll('.project-card');
 
-// Event listener untuk tombol "Lihat Proyek"
 projectCards.forEach((card) => {
-    const viewButton = card.querySelector('.view-project');
-    viewButton.addEventListener('click', () => {
+    const viewButton = card.querySelector('.btn-project');
+    viewButton.addEventListener('click', (e) => {
+        e.preventDefault();
         alert('Detail proyek akan ditampilkan di sini.');
-        // Di sini Anda bisa menambahkan logika lanjutan
     });
 });
 
-// === Navbar Scroll Auto-hide ===
+// === Navbar Auto-hide ===
 let lastScrollTop = 0;
 const navbar = document.getElementById("navbar");
 
@@ -20,10 +17,10 @@ window.addEventListener("scroll", () => {
     const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
     if (currentScroll > lastScrollTop) {
-        // Scroll ke bawah → sembunyikan navbar
+        // Scroll ke bawah
         navbar.style.top = "-100px";
     } else {
-        // Scroll ke atas → tampilkan navbar
+        // Scroll ke atas
         navbar.style.top = "0";
     }
 
