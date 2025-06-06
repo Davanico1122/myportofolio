@@ -1,68 +1,55 @@
-<!DOCTYPE html><html lang="id" data-theme="light"><head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Davanico | Portofolio</title>
-  <link rel="stylesheet" href="css/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-</head><body>
-  <nav class="navbar" id="navbar">
-    <div class="container">
-      <h1 class="logo" data-aos="fade-right">Davanico Ady Nugroho</h1>
-      <ul class="nav-links">
-        <li><a href="#about">Tentang</a></li>
-        <li><a href="#projects">Proyek</a></li>
-        <li><button id="theme-toggle" aria-label="Toggle Dark Mode">🌓</button></li>
-      </ul>
-    </div>
-  </nav>  <header class="hero container" data-aos="fade-up">
-    <h2>Halo, Saya <span class="highlight">Davanico</span>!</h2>
-    <p>Web Developer & Desainer UI/UX</p>
-  </header>  <section id="about" class="about container" data-aos="fade-up">
-    <h2>Tentang Saya</h2>
-    <p>Saya adalah seorang pengembang web yang fokus pada pembuatan antarmuka pengguna modern, responsif, dan elegan. Dengan pengalaman dalam HTML, CSS, dan JavaScript, saya menciptakan pengalaman digital yang menarik dan fungsional.</p>
-  </section>  <section id="skills" class="skills container" data-aos="fade-up">
-    <h2>Keahlian</h2>
-    <ul>
-      <li>HTML5</li>
-      <li>CSS3</li>
-      <li>JavaScript</li>
-      <li>UI/UX Design</li>
-      <li>Figma</li>
-    </ul>
-  </section>  <section id="projects" class="projects container" data-aos="fade-up">
-    <h2>Proyek Saya</h2>
-    <div class="project-grid">
-      <div class="project-card" data-aos="fade-up">
-        <img src="assets/project1.jpg" alt="Project 1" />
-        <h3>My Design (E-Commerce)</h3>
-        <p>Website e-commerce modern dengan tampilan elegan dan responsif.</p>
-        <a href="project1.html" class="btn-project">Lihat Detail</a>
-      </div>
-      <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-        <img src="assets/project2.jpg" alt="Project 2" />
-        <h3>Portofolio Pribadi</h3>
-        <p>Template portofolio pribadi yang bersih dan profesional.</p>
-        <a href="project2.html" class="btn-project">Lihat Detail</a>
-      </div>
-      <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-        <img src="assets/project3.jpg" alt="Project 3" />
-        <h3>Modern UI/UX Design</h3>
-        <p>Desain aplikasi mobile dengan pendekatan UI/UX modern dan interaktif.</p>
-        <a href="project3.html" class="btn-project">Lihat Detail</a>
-      </div>
-    </div>
-  </section>  <footer data-aos="fade-up">
-    <p>&copy; 2025 Davanico Ady Nugroho. All rights reserved.</p>
-  </footer>  <script src="js/script.js"></script>  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>  <script>
-    AOS.init({ duration: 1000, once: true });
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Proyek: My Design (Website E-Commerce)</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">← Kembali ke Portofolio</a>
+            <ul class="nav-links">
+                <li><button id="theme-toggle" aria-label="Toggle Dark Mode">🌓</button></li>
+            </ul>
+        </div>
+    </nav>
 
-    const toggleBtn = document.getElementById('theme-toggle');
-    if (toggleBtn) {
-      toggleBtn.addEventListener('click', () => {
-        const html = document.documentElement;
-        const currentTheme = html.getAttribute('data-theme');
-        html.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
-      });
-    }
-  </script></body></html>
+    <main class="container project-detail-page">
+        <section class="project-hero">
+            <h2 class="project-title">My Design (Website E-Commerce)</h2>
+            <img src="assets/project1.jpg" alt="Gambar Proyek My Design E-Commerce" class="detail-main-image">
+        </section>
+
+        <section class="project-description">
+            <p>Ini adalah deskripsi lengkap proyek "My Design" yang merupakan sebuah website e-commerce yang responsif dan sangat fungsional...</p>
+            <h3>Fitur Utama:</h3>
+            <ul>
+                <li>Desain responsif untuk berbagai perangkat</li>
+                <li>Integrasi sistem pembayaran</li>
+                <li>Manajemen produk dan kategori</li>
+                <li>Fitur pencarian dan filter produk</li>
+            </ul>
+            <h3>Teknologi yang Digunakan:</h3>
+            <ul class="skills">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>Bootstrap</li>
+            </ul>
+            <div class="project-links">
+                <a href="URL_DEMO_ANDA" target="_blank" class="btn-project">Lihat Demo Live</a>
+                <a href="URL_GITHUB_PROYEK_INI" target="_blank" class="btn-project secondary">Lihat Kode di GitHub</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Davanico Ady Nugroho. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
