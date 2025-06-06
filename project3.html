@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Proyek: Modern UI/UX Design</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo" data-aos="fade-right">← Kembali ke Portofolio</a>
+            <ul class="nav-links">
+                <li><button id="theme-toggle" aria-label="Toggle Dark Mode">🌓</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container project-detail-page">
+        <section class="project-hero" data-aos="fade-up">
+            <h2 class="project-title">Modern UI/UX Design (Aplikasi Mobile)</h2>
+            <img src="assets/project3.jpg" alt="Gambar Proyek UI/UX Design Aplikasi Mobile" class="detail-main-image">
+        </section>
+
+        <section class="project-description" data-aos="fade-up" data-aos-delay="200">
+            <p>Proyek ini merupakan studi kasus desain UI/UX untuk aplikasi mobile modern, berfokus pada menciptakan antarmuka yang tidak hanya indah tetapi juga fungsional dan mudah digunakan. Penekanan diberikan pada alur pengguna yang lancar dan konsisten.</p>
+
+            <h3>Fokus Desain:</h3>
+            <ul>
+                <li>**Estetika Modern:** Penggunaan palet warna, tipografi, dan ikonografi yang *stylish*.</li>
+                <li>**User-Centered Design:** Proses desain yang berpusat pada kebutuhan dan perilaku pengguna.</li>
+                <li>**Prototyping Interaktif:** Membuat mockup yang dapat diklik untuk simulasi pengalaman pengguna.</li>
+                <li>**Konsistensi Visual:** Memastikan elemen desain seragam di seluruh aplikasi.</li>
+                <li>**Aksesibilitas:** Pertimbangan untuk pengguna dengan beragam kebutuhan.</li>
+            </ul>
+
+            <h3>Tools yang Digunakan:</h3>
+            <ul class="skills">
+                <li>Figma / Adobe XD / Sketch (untuk desain UI/UX)</li>
+                <li>Photoshop / Illustrator (untuk aset grafis)</li>
+                <li>(Opsional jika Anda membuat prototype interaktif dengan kode) HTML, CSS, JavaScript</li>
+            </ul>
+
+            <div class="project-links">
+                <a href="#" target="_blank" class="btn-project">Lihat Desain (Behance/Dribbble)</a>
+                <a href="https://github.com/Davanico1122" target="_blank" class="btn-project secondary">Lihat Studi Kasus (GitHub/Medium)</a>
+            </div>
+        </section>
+    </main>
+
+    <footer data-aos="fade-up">
+        <p>&copy; 2025 Davanico Ady Nugroho. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        const toggleBtn = document.getElementById('theme-toggle');
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', () => {
+                const html = document.documentElement;
+                const currentTheme = html.getAttribute('data-theme');
+                html.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
+            });
+        }
+
+        let lastScrollTop = 0;
+        const navbar = document.getElementById("navbar");
+
+        if (navbar) {
+            window.addEventListener("scroll", () => {
+                const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (currentScroll > lastScrollTop) {
+                    navbar.style.top = "-100px";
+                } else {
+                    navbar.style.top = "0";
+                }
+
+                lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+            });
+        }
+    </script>
+</body>
+</html>
