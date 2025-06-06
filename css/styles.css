@@ -43,14 +43,15 @@ a {
 
 /* Navbar */
 .navbar {
-    background-color: var(--card-bg);
+    background-color: var(--card-bg); /* atau #1a1a1a */
     padding: 1rem 0;
     position: fixed;
-    width: 100%;
-    z-index: 1000;
     top: 0;
     left: 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    width: 100%;
+    z-index: 1000;
+    transition: top 0.3s ease-in-out;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .navbar .container {
