@@ -239,6 +239,7 @@ body {
 /* --- Contact Section Styling --- */
 #contact {
     text-align: center;
+    /* padding: 60px 0; // Pastikan ini ada jika Anda ingin padding standar */
 }
 
 #contact p {
@@ -249,16 +250,24 @@ body {
 }
 
 .contact-info {
+    /* Perubahan di sini untuk membuat lebih ringkas */
     margin-top: 30px;
     font-size: 1.2em;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Pusatkan item info kontak */
-    gap: 15px; /* Jarak antar baris info kontak */
+    display: flex; /* Aktifkan Flexbox */
+    flex-wrap: wrap; /* Izinkan wrapping di layar kecil */
+    justify-content: center; /* Pusatkan item secara horizontal */
+    gap: 25px; /* Jarak antar item (email, linkedin, github) */
+    max-width: 800px; /* Batasi lebar container contact-info */
+    margin-left: auto; /* Pusatkan container contact-info */
+    margin-right: auto;
 }
 
 .contact-info p {
     margin: 0; /* Hapus margin default pada p di dalam contact-info */
+    display: flex; /* Jadikan setiap p juga flex container untuk ikon dan teks */
+    align-items: center; /* Pusatkan ikon dan teks secara vertikal */
+    gap: 8px; /* Jarak antara ikon dan teks */
+    white-space: nowrap; /* Hindari wrapping teks di dalam item (jika ikon dan teks terlalu panjang) */
 }
 
 .contact-info a {
@@ -272,45 +281,10 @@ body {
     text-decoration: underline;
 }
 
-/* --- Contact Form Styling (jika diaktifkan) --- */
-.contact-form {
-    max-width: 600px;
-    margin: 40px auto 0;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 15px;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    background-color: var(--card-bg);
-    color: var(--text-color);
-    font-size: 1em;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-.contact-form input::placeholder,
-.contact-form textarea::placeholder {
-    color: var(--secondary-text-color);
-}
-
-.contact-form button.btn-project {
-    background-color: var(--primary-color);
-    color: var(--button-text-color);
-    border: none;
-    padding: 15px 30px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1.1em;
-    transition: background-color 0.3s ease;
-}
-
-.contact-form button.btn-project:hover {
-    background-color: var(--secondary-color);
+/* Jika Anda menggunakan ikon font-awesome, Anda perlu styling untuk ikonnya */
+.contact-info p i {
+    font-size: 1.2em; /* Ukuran ikon */
+    color: var(--primary-color); /* Warna ikon */
 }
 
 /* --- Footer Styling --- */
