@@ -1,25 +1,27 @@
 /* styles.css */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
+/* Variabel Warna untuk Tema Gelap */
 :root {
   --bg-color: #0d0d0d;
   --text-color: #ffffff;
-  --primary-color: #8b5cf6; /* Ganti primary menjadi primary-color untuk kejelasan */
-  --secondary-color: #ec4899; /* Ganti secondary menjadi secondary-color */
-  --card-bg: #1a1a1a;
-  --border-color: rgba(255, 255, 255, 0.1); /* Tambahkan warna border */
-  --secondary-text-color: #aaa; /* Tambahkan warna teks sekunder */
-  --button-text-color: #ffffff; /* Warna teks tombol */
+  --primary-color: #8b5cf6; /* Warna utama untuk highlight, tombol, judul */
+  --secondary-color: #ec4899; /* Warna sekunder untuk hover, aksen */
+  --card-bg: #1a1a1a; /* Background untuk kartu atau elemen konten */
+  --border-color: rgba(255, 255, 255, 0.1); /* Warna border tipis */
+  --secondary-text-color: #aaa; /* Warna teks sekunder (misal: footer, placeholder) */
+  --button-text-color: #ffffff; /* Warna teks di tombol */
   --link-color: var(--primary-color); /* Warna default untuk link */
-  --link-hover-color: var(--secondary-color); /* Warna link saat hover */
+  --link-hover-color: var(--secondary-color); /* Warna link saat di-hover */
 }
 
+/* Variabel Warna untuk Tema Terang */
 [data-theme="light"] {
   --bg-color: #ffffff;
   --text-color: #0d0d0d;
-  --card-bg: #f4f4f4;
   --primary-color: #7c3aed;
   --secondary-color: #db2777;
+  --card-bg: #f4f4f4;
   --border-color: rgba(0, 0, 0, 0.1);
   --secondary-text-color: #555;
   --button-text-color: #ffffff;
@@ -27,6 +29,7 @@
   --link-hover-color: var(--secondary-color);
 }
 
+/* --- General Styling --- */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -34,16 +37,18 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   line-height: 1.6;
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* Smooth scroll untuk navigasi anchor */
 }
 
 .container {
   width: 90%;
   max-width: 1200px;
   margin: auto;
-  padding: 60px 0; /* Memberi padding default untuk section di dalam container */
+  /* Padding default untuk semua section yang menggunakan .container */
+  padding: 60px 0;
 }
 
+/* --- Navbar Styling --- */
 .navbar {
   position: fixed;
   width: 100%;
@@ -53,14 +58,14 @@ body {
   padding: 0.6rem 0;
   z-index: 999;
   transition: top 0.3s;
-  border-bottom: 1px solid var(--border-color); /* Menggunakan variabel */
+  border-bottom: 1px solid var(--border-color);
 }
 
 .navbar .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0; /* Hapus padding default untuk container di navbar */
+  padding: 0; /* Menghilangkan padding vertikal pada container di navbar */
 }
 
 .logo {
@@ -89,6 +94,11 @@ body {
   border: none;
   font-size: 1rem;
   cursor: pointer;
+  transition: color 0.3s ease; /* Transisi warna untuk hover */
+}
+
+.nav-links a:hover {
+    color: var(--primary-color); /* Warna saat hover */
 }
 
 #theme-toggle {
@@ -97,8 +107,9 @@ body {
   border-radius: 4px;
 }
 
+/* --- Hero Section Styling --- */
 .hero {
-  padding-top: 7rem;
+  padding-top: 7rem; /* Memberi ruang agar tidak tertutup navbar */
   padding-bottom: 4rem;
   text-align: center;
 }
@@ -115,41 +126,53 @@ body {
   font-size: 1rem;
 }
 
-/* Bagian untuk About dan Skills (untuk konsistensi padding) */
-#about, #skills {
-  padding: 60px 0; /* Konsisten dengan padding container default */
-}
-
-#about h2, #skills h2, #projects h2, #contact h2 {
+/* --- Section Title Styling (General) --- */
+#about h2,
+#skills h2,
+#projects h2,
+#contact h2 {
     text-align: center;
     margin-bottom: 40px;
     font-size: 2.2rem;
     color: var(--primary-color);
 }
 
+/* --- About Me Section Styling --- */
+#about p {
+    text-align: center; /* Pusatkan teks about me */
+    max-width: 800px; /* Batasi lebar paragraf agar tidak terlalu panjang */
+    margin: 0 auto; /* Pusatkan paragraf */
+}
+
+/* --- Skills Section Styling --- */
 #skills ul {
     list-style: none;
     padding: 0;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
+    flex-wrap: wrap; /* Izinkan item untuk wrapping ke baris berikutnya */
+    justify-content: center; /* Pusatkan item secara horizontal */
+    gap: 1rem; /* Jarak antar kotak skill */
 }
 
 #skills li {
     background-color: var(--card-bg);
-    padding: 10px 20px;
+    padding: 8px 15px; /* Mengurangi padding agar kotak tidak terlalu besar */
     border-radius: 5px;
-    font-size: 1em;
+    font-size: 1em; /* Ukuran font tetap atau bisa disesuaikan */
     color: var(--text-color);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
 }
 
+#skills li:hover {
+    transform: translateY(-3px); /* Efek hover ringan */
+}
 
-.projects-grid { /* Mengganti .project-cards menjadi .projects-grid */
+/* --- Projects Section Styling --- */
+.projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+  gap: 2rem; /* Jarak antar kartu proyek */
 }
 
 .project-card {
@@ -160,7 +183,7 @@ body {
   transition: transform 0.3s ease;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-between; /* Untuk mendorong tombol ke bawah */
 }
 
 .project-card:hover {
@@ -171,19 +194,21 @@ body {
   width: 100%;
   height: auto;
   border-radius: 8px;
-  max-height: 180px;
-  object-fit: cover;
+  max-height: 180px; /* Batasi tinggi gambar */
+  object-fit: cover; /* Pastikan gambar mengisi ruang tanpa distorsi */
   margin-bottom: 1rem;
 }
 
 .project-card h3 {
   font-size: 1.3rem;
   margin: 0.5rem 0;
+  color: var(--primary-color); /* Warna judul proyek */
 }
 
 .project-card p {
   font-size: 0.95rem;
-  flex-grow: 1;
+  flex-grow: 1; /* Agar paragraf mengisi ruang yang tersedia */
+  color: var(--secondary-text-color);
 }
 
 .btn-project {
@@ -191,14 +216,14 @@ body {
   margin-top: 1.5rem;
   padding: 0.6rem 1.2rem;
   font-size: 0.95rem;
-  background-color: var(--primary-color); /* Menggunakan primary-color */
+  background-color: var(--primary-color);
   color: var(--button-text-color);
   border: none;
   border-radius: 5px;
   text-align: center;
   transition: background 0.3s ease;
   text-decoration: none;
-  align-self: flex-start;
+  align-self: flex-start; /* Agar tombol berada di kiri bawah kartu */
 }
 
 .btn-project.secondary {
@@ -208,19 +233,12 @@ body {
 }
 
 .btn-project:hover {
-  background-color: var(--secondary-color); /* Menggunakan secondary-color */
+  background-color: var(--secondary-color);
 }
 
-/* --- Gaya untuk Bagian Kontak --- */
+/* --- Contact Section Styling --- */
 #contact {
-    padding: 60px 0; /* Padding atas dan bawah, konsisten dengan section lain */
     text-align: center;
-}
-
-#contact h2 {
-    margin-bottom: 20px;
-    font-size: 2.2rem; /* Ukuran font judul, konsisten dengan section lain */
-    color: var(--primary-color);
 }
 
 #contact p {
@@ -235,7 +253,7 @@ body {
     font-size: 1.2em;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Pusatkan item */
+    align-items: center; /* Pusatkan item info kontak */
     gap: 15px; /* Jarak antar baris info kontak */
 }
 
@@ -244,17 +262,17 @@ body {
 }
 
 .contact-info a {
-    color: var(--link-color); /* Menggunakan variabel link-color */
+    color: var(--link-color);
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 .contact-info a:hover {
-    color: var(--link-hover-color); /* Menggunakan variabel link-hover-color */
+    color: var(--link-hover-color);
     text-decoration: underline;
 }
 
-/* Gaya untuk formulir kontak (jika diaktifkan) */
+/* --- Contact Form Styling (jika diaktifkan) --- */
 .contact-form {
     max-width: 600px;
     margin: 40px auto 0;
@@ -272,7 +290,7 @@ body {
     color: var(--text-color);
     font-size: 1em;
     width: 100%;
-    box-sizing: border-box; /* Pastikan padding tidak menambah lebar */
+    box-sizing: border-box;
 }
 
 .contact-form input::placeholder,
@@ -295,16 +313,17 @@ body {
     background-color: var(--secondary-color);
 }
 
-
+/* --- Footer Styling --- */
 footer {
   padding: 2rem 0;
   text-align: center;
   font-size: 0.9rem;
-  color: var(--secondary-text-color); /* Menggunakan variabel */
+  color: var(--secondary-text-color);
+  border-top: 1px solid var(--border-color); /* Garis di atas footer */
+  margin-top: 60px; /* Jarak dari section sebelumnya */
 }
 
-/* ==== Tambahan untuk halaman detail proyek ==== */
-
+/* ==== Tambahan untuk halaman detail proyek (project1.html, project2.html, dst.) ==== */
 .project-detail-page {
   padding-top: 7rem;
   padding-bottom: 4rem;
@@ -335,24 +354,26 @@ footer {
   color: var(--primary-color);
 }
 
-.skills { /* Ini kemungkinan merujuk pada bagian skills di halaman utama */
+/* Ini adalah gaya untuk daftar skill di halaman detail proyek, jika ada */
+.project-description .skills {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
   list-style: none;
   padding: 0;
   margin: 0.5rem 0;
+  justify-content: center; /* Pusatkan juga di halaman detail */
 }
 
-.skills li {
+.project-description .skills li {
   background-color: var(--card-bg);
   padding: 0.4rem 0.8rem;
   border-radius: 5px;
   font-size: 0.85rem;
 }
 
-/* ==== Responsiveness ==== */
 
+/* ==== Responsiveness (Media Queries) ==== */
 @media (max-width: 768px) {
   .hero h2 {
     font-size: 2rem;
@@ -360,6 +381,10 @@ footer {
 
   .navbar .logo {
     font-size: 1rem;
+  }
+
+  .nav-links {
+      gap: 1rem; /* Kurangi jarak antar link di navbar pada mobile */
   }
 
   .project-card h3 {
@@ -378,4 +403,48 @@ footer {
   .contact-info {
     font-size: 1em;
   }
+
+  #skills li {
+      padding: 6px 12px; /* Lebih kecil lagi di mobile */
+      font-size: 0.9em;
+  }
+}
+
+@media (max-width: 480px) {
+    .navbar .container {
+        flex-direction: column; /* Stack logo dan nav-links */
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .nav-links {
+        flex-wrap: wrap; /* Izinkan link nav-links wrapping */
+        justify-content: center;
+        gap: 0.8rem;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    #about p {
+        font-size: 0.9em;
+    }
+
+    .project-card {
+        padding: 0.8rem;
+    }
+
+    .btn-project {
+        padding: 0.5rem 1rem;
+        font-size: 0.9em;
+    }
+
+    #contact p {
+        font-size: 1em;
+    }
+
+    .contact-info {
+        font-size: 0.9em;
+    }
 }
