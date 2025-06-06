@@ -1,15 +1,16 @@
-// === Tombol "Lihat Proyek" ===
+// script.js
+
 const projectCards = document.querySelectorAll('.project-card');
 
 projectCards.forEach((card) => {
     const viewButton = card.querySelector('.btn-project');
     viewButton.addEventListener('click', (e) => {
-        e.preventDefault();
-        alert('Detail proyek akan ditampilkan di sini.');
+        // Default behavior is already using <a href="projectX.html"> so you don't need JS unless for dynamic navigation
+        // You can enhance it later if needed
     });
 });
 
-// === Navbar Auto-hide ===
+// Navbar auto-hide
 let lastScrollTop = 0;
 const navbar = document.getElementById("navbar");
 
@@ -17,10 +18,8 @@ window.addEventListener("scroll", () => {
     const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
     if (currentScroll > lastScrollTop) {
-        // Scroll ke bawah
         navbar.style.top = "-100px";
     } else {
-        // Scroll ke atas
         navbar.style.top = "0";
     }
 
