@@ -1,98 +1,68 @@
-<!DOCTYPE html>
-<html lang="id" data-theme="light">
+<!DOCTYPE html><html lang="id" data-theme="light"><head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Davanico | Portofolio</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head><body>
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <h1 class="logo" data-aos="fade-right">Davanico Ady Nugroho</h1>
+      <ul class="nav-links">
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#projects">Proyek</a></li>
+        <li><button id="theme-toggle" aria-label="Toggle Dark Mode">🌓</button></li>
+      </ul>
+    </div>
+  </nav>  <header class="hero container" data-aos="fade-up">
+    <h2>Halo, Saya <span class="highlight">Davanico</span>!</h2>
+    <p>Web Developer & Desainer UI/UX</p>
+  </header>  <section id="about" class="about container" data-aos="fade-up">
+    <h2>Tentang Saya</h2>
+    <p>Saya adalah seorang pengembang web yang fokus pada pembuatan antarmuka pengguna modern, responsif, dan elegan. Dengan pengalaman dalam HTML, CSS, dan JavaScript, saya menciptakan pengalaman digital yang menarik dan fungsional.</p>
+  </section>  <section id="skills" class="skills container" data-aos="fade-up">
+    <h2>Keahlian</h2>
+    <ul>
+      <li>HTML5</li>
+      <li>CSS3</li>
+      <li>JavaScript</li>
+      <li>UI/UX Design</li>
+      <li>Figma</li>
+    </ul>
+  </section>  <section id="projects" class="projects container" data-aos="fade-up">
+    <h2>Proyek Saya</h2>
+    <div class="project-grid">
+      <div class="project-card" data-aos="fade-up">
+        <img src="assets/project1.jpg" alt="Project 1" />
+        <h3>My Design (E-Commerce)</h3>
+        <p>Website e-commerce modern dengan tampilan elegan dan responsif.</p>
+        <a href="project1.html" class="btn-project">Lihat Detail</a>
+      </div>
+      <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+        <img src="assets/project2.jpg" alt="Project 2" />
+        <h3>Portofolio Pribadi</h3>
+        <p>Template portofolio pribadi yang bersih dan profesional.</p>
+        <a href="project2.html" class="btn-project">Lihat Detail</a>
+      </div>
+      <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+        <img src="assets/project3.jpg" alt="Project 3" />
+        <h3>Modern UI/UX Design</h3>
+        <p>Desain aplikasi mobile dengan pendekatan UI/UX modern dan interaktif.</p>
+        <a href="project3.html" class="btn-project">Lihat Detail</a>
+      </div>
+    </div>
+  </section>  <footer data-aos="fade-up">
+    <p>&copy; 2025 Davanico Ady Nugroho. All rights reserved.</p>
+  </footer>  <script src="js/script.js"></script>  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>  <script>
+    AOS.init({ duration: 1000, once: true });
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portofolio Davanico Ady Nugroho</title> <link rel="stylesheet" href="css/styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-</head>
-
-<body>
-    <nav class="navbar" id="navbar">
-        <div class="container">
-            <h1 class="logo" data-aos="fade-right">Davanico Ady Nugroho</h1>
-            <ul class="nav-links" data-aos="fade-left">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><button id="theme-toggle" aria-label="Toggle Dark Mode">🌓</button></li>
-            </ul>
-        </div>
-    </nav>
-
-    <header class="hero" data-aos="fade-up">
-        <div class="container">
-            <h2>Hi, I'm <span class="highlight">Davanico Ady Nugroho</span></h2>
-            <p>Baru saja memulai petualangan di web development sebagai Frontend Developer, saya juga seorang UI Designer yang menyukai desain grafis.
-            Saya bersemangat untuk menciptakan pengalaman web yang interaktif, responsif, dan estetis.</p>
-        </div>
-    </header>
-
-    <main class="container">
-        <section id="about" data-aos="fade-up">
-            <h2>About Me</h2>
-            <p>Halo! Saya seseorang yang baru belajar membuat web, saya antusias dalam menciptakan antarmuka pengguna yang tidak hanya ramping dan responsif,
-            tetapi juga memberikan pengalaman pengguna yang benar-benar mulus</p>
-            <h3>Skills</h3>
-            <ul class="skills" data-aos="fade-up" data-aos-delay="200">
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-                <li>React</li>
-                <li>Node.js</li>
-                <li>UI Design</li>
-                <li>Graphic Design</li>
-                <li>Figma</li>
-            </ul>
-        </section>
-
-        <section id="projects" data-aos="fade-up">
-            <h2>My Projects</h2>
-
-            <div class="project-card" data-aos="zoom-in-up">
-                <img src="assets/project1.jpg" alt="Project 1: My Design (E-Commerce)" />
-                <h3>My Design (Website E-Commerce)</h3> <p>A responsive and highly functional online store with intuitive user interface.</p>
-                <a href="project1.html" class="btn-project">🔗 Lihat Proyek</a>
-            </div>
-
-            <div class="project-card" data-aos="zoom-in-up" data-aos-delay="100">
-                <img src="assets/project2.jpg" alt="Project 2: Personal Portfolio" />
-                <h3>Personal Portfolio Template</h3> <p>Minimalistic personal portfolio template showcasing projects and skills.</p>
-                <a href="project2.html" class="btn-project">🔗 Lihat Proyek</a>
-            </div>
-
-            <div class="project-card" data-aos="zoom-in-up" data-aos-delay="200">
-                <img src="assets/project3.jpg" alt="Project 3: Modern UI/UX Design" />
-                <h3>Modern UI/UX Design (Mobile App)</h3> <p>Modern UI/UX design for mobile applications with a focus on user experience.</p>
-                <a href="project3.html" class="btn-project">🔗 Lihat Proyek</a>
-            </div>
-        </section>
-
-        <section id="contact" data-aos="fade-up">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:davaniko1122@gmail.com">davaniko1122@gmail.com</a></p>
-            <p>Instagram: <a href="https://instagram.com/davanico1122_" target="_blank">davanico1122_</a></p> <p>Github: <a href="https://github.com/Davanico1122" target="_blank">https://github.com/Davanico1122</a></p> </section>
-    </main>
-
-    <footer data-aos="fade-up">
-        <p>&copy; 2025 Davanico Ady Nugroho. All rights reserved.</p>
-    </footer>
-
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init({ duration: 1000, once: true });
-
-        const themeToggleBtn = document.getElementById('theme-toggle'); // Ubah nama variabel agar tidak ambigu
-        if (themeToggleBtn) { // Pastikan tombol ada sebelum menambahkan event listener
-            themeToggleBtn.addEventListener('click', () => {
-                const html = document.documentElement;
-                const currentTheme = html.getAttribute('data-theme');
-                html.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
-            });
-        }
-    </script>
-    <script src="js/script.js"></script> </body>
-
-</html>
+    const toggleBtn = document.getElementById('theme-toggle');
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', () => {
+        const html = document.documentElement;
+        const currentTheme = html.getAttribute('data-theme');
+        html.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
+      });
+    }
+  </script></body></html>
