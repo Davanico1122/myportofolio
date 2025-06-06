@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Proyek: Portofolio Pribadi</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="index.html" class="logo" data-aos="fade-right">← Kembali ke Portofolio</a>
+            <ul class="nav-links">
+                <li><button id="theme-toggle" aria-label="Toggle Dark Mode">🌓</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container project-detail-page">
+        <section class="project-hero" data-aos="fade-up">
+            <h2 class="project-title">Portofolio Pribadi</h2>
+            <img src="assets/project2.jpg" alt="Gambar Proyek Portofolio Pribadi" class="detail-main-image">
+        </section>
+
+        <section class="project-description" data-aos="fade-up" data-aos-delay="200">
+            <p>Proyek ini adalah pengembangan template portofolio pribadi yang minimalis, modern, dan sangat interaktif. Tujuannya adalah untuk menampilkan karya dan keahlian seorang profesional kreatif atau *developer* dengan cara yang elegan dan mudah diakses.</p>
+
+            <h3>Fitur Utama:</h3>
+            <ul>
+                <li>**Desain Minimalis & Bersih:** Fokus pada konten dengan sedikit gangguan visual.</li>
+                <li>**Animasi & Transisi Halus:** Memberikan pengalaman pengguna yang dinamis dan modern.</li>
+                <li>**Layout Responsif:** Memastikan tampilan yang sempurna di desktop, tablet, dan ponsel.</li>
+                <li>**Bagian Proyek Fleksibel:** Mudah disesuaikan untuk menampilkan berbagai jenis karya.</li>
+                <li>**Integrasi Sosial Media:** Link langsung ke profil sosial media atau GitHub.</li>
+            </ul>
+
+            <h3>Teknologi yang Digunakan:</h3>
+            <ul class="skills">
+                <li>HTML5</li>
+                <li>CSS3 (dengan fitur-fitur modern)</li>
+                <li>JavaScript (untuk animasi dan interaksi)</li>
+                <li>AOS Library (untuk efek scroll-reveal)</li>
+            </ul>
+
+            <div class="project-links">
+                <a href="#" target="_blank" class="btn-project">Lihat Demo Live</a>
+                <a href="https://github.com/Davanico1122" target="_blank" class="btn-project secondary">Lihat Kode di GitHub</a>
+            </div>
+        </section>
+    </main>
+
+    <footer data-aos="fade-up">
+        <p>&copy; 2025 Davanico Ady Nugroho. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+
+        const toggleBtn = document.getElementById('theme-toggle');
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', () => {
+                const html = document.documentElement;
+                const currentTheme = html.getAttribute('data-theme');
+                html.setAttribute('data-theme', currentTheme === 'dark' ? 'light' : 'dark');
+            });
+        }
+
+        let lastScrollTop = 0;
+        const navbar = document.getElementById("navbar");
+
+        if (navbar) {
+            window.addEventListener("scroll", () => {
+                const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+                if (currentScroll > lastScrollTop) {
+                    navbar.style.top = "-100px";
+                } else {
+                    navbar.style.top = "0";
+                }
+
+                lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+            });
+        }
+    </script>
+</body>
+</html>
