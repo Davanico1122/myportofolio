@@ -126,7 +126,7 @@ body {
     font-size: 1rem;
 }
 
-/* Tambahan untuk Styling Foto Profil di Hero Section */
+/* Styling Foto Profil di Hero Section */
 .profile-pic {
     width: 180px; /* Atur lebar foto */
     height: 180px; /* Atur tinggi foto */
@@ -259,7 +259,6 @@ body {
 /* --- Contact Section Styling --- */
 #contact {
     text-align: center;
-    /* padding: 60px 0; // Pastikan ini ada jika Anda ingin padding standar */
 }
 
 #contact p {
@@ -270,7 +269,6 @@ body {
 }
 
 .contact-info {
-    /* Perubahan di sini untuk membuat lebih ringkas */
     margin-top: 30px;
     font-size: 1.2em;
     display: flex; /* Aktifkan Flexbox */
@@ -317,10 +315,31 @@ footer {
     margin-top: 60px; /* Jarak dari section sebelumnya */
 }
 
-/* ==== Tambahan untuk halaman detail proyek (project1.html, project2.html, dst.) ==== */
+/* ==== Penyesuaian untuk Halaman Detail Proyek (project1.html, project2.html, dst.) ==== */
 .project-detail-page {
-    padding-top: 7rem;
+    padding-top: 7rem; /* Memberi ruang agar tidak tertutup navbar */
     padding-bottom: 4rem;
+}
+
+/* Tombol Kembali ke Portofolio */
+.back-to-portfolio {
+    display: inline-flex; /* Gunakan flex untuk menyelaraskan ikon dan teks */
+    align-items: center;
+    gap: 8px; /* Jarak antara ikon dan teks */
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.back-to-portfolio i {
+    font-size: 1em;
+}
+
+.back-to-portfolio:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
 }
 
 .project-hero {
@@ -328,14 +347,60 @@ footer {
     margin-bottom: 2rem;
 }
 
-.detail-main-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-top: 1rem;
-    max-height: 400px;
-    object-fit: cover;
+.project-title { /* Menggantikan .project-hero h1 */
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
 }
+
+.project-hero p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 1rem;
+    margin-bottom: 40px; /* Jarak antara deskripsi hero dan galeri */
+}
+
+/* --- GALERI POSTER untuk Halaman Detail Proyek --- */
+.poster-gallery-section {
+    margin-bottom: 3rem; /* Jarak ke bagian deskripsi di bawah */
+}
+
+.poster-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 2-4 kolom tergantung ukuran layar */
+    gap: 25px; /* Jarak antar poster */
+    justify-content: center; /* Pusatkan item jika jumlahnya kurang dari grid penuh */
+}
+
+.poster-item {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden; /* Memastikan sudut gambar ikut melengkung */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    text-align: center;
+    display: flex; /* Gunakan flex untuk mengatur gambar dan keterangan vertikal */
+    flex-direction: column;
+}
+
+.poster-item:hover {
+    transform: translateY(-5px); /* Efek hover sedikit naik */
+}
+
+.poster-item img {
+    width: 100%;
+    height: 300px; /* **Ukuran gambar yang Disesuaikan**: Tinggi tetap agar seragam */
+    object-fit: cover; /* Memotong gambar agar pas tanpa distorsi */
+    display: block; /* Menghilangkan spasi ekstra di bawah gambar */
+}
+
+.poster-caption {
+    padding: 15px;
+    font-size: 0.9em;
+    color: var(--secondary-text-color);
+    flex-grow: 1; /* Biarkan caption mengambil sisa ruang */
+}
+
 
 .project-description {
     max-width: 800px;
@@ -348,8 +413,7 @@ footer {
     color: var(--primary-color);
 }
 
-/* Ini adalah gaya untuk daftar skill di halaman detail proyek, jika ada */
-.project-description .skills {
+.project-description ul.skills { /* Pastikan spesifik ke ul.skills di project-description */
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
@@ -359,11 +423,26 @@ footer {
     justify-content: center; /* Pusatkan juga di halaman detail */
 }
 
-.project-description .skills li {
+.project-description ul.skills li { /* Pastikan spesifik ke ul.skills li di project-description */
     background-color: var(--card-bg);
     padding: 0.4rem 0.8rem;
     border-radius: 5px;
     font-size: 0.85rem;
+}
+
+.project-links {
+    margin-top: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* Sesuaikan tombol di halaman detail agar konsisten */
+.project-links .btn-project {
+    margin-top: 0; /* Hapus margin-top default dari .btn-project jika ada */
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
 }
 
 
@@ -385,14 +464,6 @@ footer {
         font-size: 1.1rem;
     }
 
-    .project-description {
-        padding: 0.5rem;
-    }
-
-    .detail-main-image {
-        max-height: 250px;
-    }
-
     /* Penyesuaian untuk contact info di mobile */
     .contact-info {
         font-size: 1em;
@@ -407,6 +478,18 @@ footer {
         width: 150px; /* Lebih kecil di mobile */
         height: 150px;
         margin-top: 20px;
+    }
+
+    /* Responsiveness untuk Galeri Poster di halaman detail */
+    .poster-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Minimal lebar kolom lebih kecil di tablet */
+        gap: 20px;
+    }
+    .poster-item img {
+        height: 250px; /* Tinggi gambar juga sedikit berkurang */
+    }
+    .project-detail-content {
+        padding: 0 20px; /* Tambahkan padding horizontal untuk konten utama */
     }
 }
 
@@ -451,5 +534,21 @@ footer {
     .profile-pic {
         width: 120px; /* Lebih kecil lagi di mobile */
         height: 120px;
+    }
+
+    /* Responsiveness untuk Galeri Poster di halaman detail */
+    .poster-gallery {
+        grid-template-columns: 1fr; /* Satu kolom di layar sangat kecil (ponsel) */
+        gap: 15px;
+    }
+    .poster-item img {
+        height: 200px; /* Tinggi gambar lebih kecil lagi */
+    }
+    .project-detail-content {
+        padding: 0 15px; /* Tambahkan sedikit padding horizontal pada konten */
+    }
+    .project-links {
+        flex-direction: column; /* Tombol stack di mobile */
+        gap: 10px;
     }
 }
