@@ -1,108 +1,94 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" data-theme="dark">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portofolio Saya</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    rel="stylesheet"
-  />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Davanico Ady Nugroho - Portofolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
-<body data-theme="dark">
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="container">
-      <a href="#" class="logo">NamaSaya</a>
-      <ul class="nav-links">
-        <li><a href="#about">Tentang</a></li>
-        <li><a href="#skills">Skill</a></li>
-        <li><a href="#projects">Proyek</a></li>
-        <li><a href="#contact">Kontak</a></li>
-      </ul>
-      <button id="theme-toggle" aria-label="Toggle Theme">🌙</button>
-    </div>
-  </nav>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="logo" data-aos="fade-right">Davanico Ady Nugroho</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skill</a></li>
+                <li><a href="#projects">Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><button id="theme-toggle">🌓</button></li>
+            </ul>
+        </div>
+    </nav>
 
-  <!-- Hero -->
-  <section class="hero">
-    <h2>Halo, Saya NamaSaya</h2>
-    <p>Seorang developer web yang antusias membuat proyek keren dan modern.</p>
-    <img src="assets/profile.jpg" alt="Foto Profil" class="profile-pic" />
-  </section>
+    <header class="hero" id="hero">
+        <div class="container" data-aos="fade-up">
+            <h2>Halo, saya Davanico 👋</h2>
+            <p>Lagi belajar jadi web developer dan UI/UX designer, pengen bikin solusi digital yang kekinian dan ringan.</p>
+            <img src="assets/profile.JPG" alt="Foto Profil Davanico" class="profile-pic">
+        </div>
+    </header>
 
-  <!-- About -->
-  <section id="about" class="container">
-    <h2>Tentang Saya</h2>
-    <p>
-      Saya adalah developer yang fokus pada pembuatan aplikasi web dengan teknologi
-      modern. Saya suka belajar dan mengembangkan skill saya setiap hari.
-    </p>
-  </section>
+    <section id="about" class="container" data-aos="fade-up">
+        <h2>About Me</h2>
+        <p>Saya punya ketertarikan besar pada dunia pengembangan web. Saya suka sekali merancang dan membangun website yang terlihat modern, terasa interaktif saat digunakan, dan tentu saja memiliki estetika yang menarik. Bagi saya, kepuasan pengguna adalah yang terpenting,
+            dan saya selalu berusaha memberikan pengalaman terbaik melalui karya-karya saya.</p>
+    </section>
 
-  <!-- Skills -->
-  <section id="skills" class="container">
-    <h2>Skill</h2>
-    <ul>
-      <li>HTML5</li>
-      <li>CSS3</li>
-      <li>JavaScript</li>
-      <li>React</li>
-      <li>Node.js</li>
-      <li>Python</li>
-    </ul>
-  </section>
+    <section id="skills" class="container" data-aos="fade-up">
+        <h2>Skill</h2>
+        <ul>
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>Figma / UI Design</li>
+            <li>GitHub</li>
+            <li>Corel Draw</li>
+        </ul>
+    </section>
 
-  <!-- Projects -->
-  <section id="projects" class="container">
-    <h2>Proyek</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <img src="assets/project1.jpg" alt="Project 1" />
-        <h3>Website Portofolio</h3>
-        <p>Website portofolio pribadi dengan desain responsif dan mode gelap/terang.</p>
-        <a href="project-detail.html" class="btn-project">Lihat Detail</a>
-      </div>
-      <div class="project-card">
-        <img src="assets/project2.jpg" alt="Project 2" />
-        <h3>Aplikasi To-Do List</h3>
-        <p>Aplikasi manajemen tugas dengan fitur penyimpanan lokal dan filter.</p>
-        <a href="#" class="btn-project">Lihat Detail</a>
-      </div>
-      <!-- Tambah proyek lainnya -->
-    </div>
-  </section>
+    <section id="projects" class="container" data-aos="fade-up">
+        <h2>Project</h2>
+        <div class="projects-grid">
+            <div class="project-card" data-aos="fade-up">
+                <img src="assets/project1.jpg" alt="Design Poster" />
+                <h3>DESIGN POSTER</h3>
+                <p>Selamat datang di design poster saya ini, tempat di mana ide-ide bertemu visual! Setiap poster dibuat untuk tidak hanya enak dipandang, tapi juga mampu menyampaikan pesan secara efektif dan menarik.</p>
+                <a href="project1.html" class="btn-project">Lihat Detail</a>
+            </div>
+            <div class="project-card" data-aos="fade-up">
+                <img src="assets/project2.jpg" alt="Portofolio Pribadi" />
+                <h3>Portofolio Pribadi</h3>
+                <p>Template portofolio pribadi modern dan interaktif, dirancang untuk menampilkan karya secara profesional.</p>
+                <a href="project2.html" class="btn-project">Lihat Detail</a>
+            </div>
+            <div class="project-card" data-aos="fade-up">
+                <img src="assets/project3.jpg" alt="UI/UX Aplikasi Mobile" />
+                <h3>UI/UX Aplikasi Mobile</h3>
+                <p>Studi desain UI/UX untuk aplikasi mobile modern dengan fokus pada pengalaman pengguna yang intuitif.</p>
+                <a href="project3.html" class="btn-project">Lihat Detail</a>
+            </div>
+        </div>
+    </section>
 
-  <!-- Contact -->
-  <section id="contact" class="container">
-    <h2>Kontak</h2>
-    <p>Silakan hubungi saya melalui media berikut:</p>
-    <div class="contact-info">
-      <p><i class="fas fa-envelope"></i> <a href="mailto:email@example.com">email@example.com</a></p>
-      <p><i class="fas fa-phone"></i> +62 812 3456 7890</p>
-      <p><i class="fab fa-github"></i> <a href="https://github.com/username" target="_blank">github.com/username</a></p>
-    </div>
-  </section>
+    <section id="contact" class="container" data-aos="fade-up">
+        <h2>Kontak</h2>
+        <p>Tertarik untuk berkolaborasi atau sekadar menyapa? Jangan ragu untuk menghubungi saya melalui:</p>
+        <div class="contact-info">
+            <p><i class="fas fa-envelope"></i> Email: <a href="mailto:davanico.ady@example.com">davanico.ady@example.com</a></p>
+            <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/davanico" target="_blank" rel="noopener noreferrer">Davanico Ady Nugroho</a></p>
+            <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/davanico" target="_blank" rel="noopener noreferrer">davanico</a></p>
+        </div>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 NamaSaya. All rights reserved.
-  </footer>
+    <footer>
+        <p>&copy; 2025 Davanico Ady Nugroho. All rights reserved.</p>
+    </footer>
 
-  <script>
-    // Toggle dark/light mode
-    const toggleBtn = document.getElementById('theme-toggle');
-    const body = document.body;
-    toggleBtn.addEventListener('click', () => {
-      if (body.getAttribute('data-theme') === 'dark') {
-        body.setAttribute('data-theme', 'light');
-        toggleBtn.textContent = '☀️';
-      } else {
-        body.setAttribute('data-theme', 'dark');
-        toggleBtn.textContent = '🌙';
-      }
-    });
-  </script>
+    <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
 </body>
-    </html>
+</html>
