@@ -45,3 +45,9 @@ Untuk menjelajahi portofolio ini secara lokal, Anda dapat mengklon repositori in
 ```bash
 git clone [https://github.com/Davanico1122/myportofolio.git](https://github.com/Davanico1122/myportofolio.git)
 cd myportofolio
+
+Lisensi
+© 2025 Davanico Ady Nugroho. All rights reserved.
+
+(Jika Anda ingin menggunakan lisensi sumber terbuka seperti MIT, Anda dapat mengganti baris di atas dengan: Proyek ini bersifat sumber terbuka dan tersedia di bawah [Lisensi MIT](LICENSE) dan membuat file LICENSE terpisah.)
+
