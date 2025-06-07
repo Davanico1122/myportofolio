@@ -145,6 +145,7 @@ body {
     transform: scale(1.05); /* Efek sedikit membesar saat dihover */
 }
 
+
 /* --- Section Title Styling (General) --- */
 #about h2,
 #skills h2,
@@ -179,7 +180,7 @@ body {
     border-radius: 5px;
     font-size: 1em; /* Ukuran font tetap atau bisa disesuaikan */
     color: var(--text-color);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: transform 0.2s ease;
 }
 
@@ -199,14 +200,14 @@ body {
     padding: 1rem;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease; /* Transisi untuk efek hover */
+    transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Untuk mendorong tombol ke bawah */
 }
 
 .project-card:hover {
-    transform: translateY(-5px) scale(1.03); /* Menggeser ke atas sedikit dan mengembang 3% */
+    transform: translateY(-5px);
 }
 
 .project-card img {
@@ -365,62 +366,41 @@ footer {
 }
 
 .poster-gallery {
-    display: flex; /* Mengubah dari grid menjadi flexbox */
-    flex-direction: column; /* Menumpuk item (baris poster) secara vertikal */
-    align-items: center; /* Memusatkan setiap item (baris) secara horizontal */
-    gap: 25px; /* Jarak vertikal antara setiap baris/kelompok poster */
-}
-
-/* Ini adalah kontainer baru untuk dua poster di tengah */
-.poster-middle-row {
-    display: flex; /* Mengaktifkan flexbox untuk dua poster di dalamnya */
-    justify-content: center; /* Memusatkan kedua poster di dalam baris ini */
-    gap: 25px; /* Jarak horizontal antara dua poster */
-    width: 100%; /* Pastikan mengambil lebar penuh agar pemusatan bekerja */
-    max-width: 700px; /* Sesuaikan lebar maksimum agar kedua poster di tengah sejajar dengan poster tunggal di atas/bawah */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* 2-4 kolom tergantung ukuran layar */
+    gap: 25px; /* Jarak antar poster */
+    justify-content: center; /* Pusatkan item jika jumlahnya kurang dari grid penuh */
 }
 
 .poster-item {
     background-color: var(--card-bg);
     border-radius: 10px;
-    overflow: hidden;
+    overflow: hidden; /* Memastikan sudut gambar ikut melengkung */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
     text-align: center;
-    display: flex;
+    display: flex; /* Gunakan flex untuk mengatur gambar dan keterangan vertikal */
     flex-direction: column;
 }
 
 .poster-item:hover {
-    transform: translateY(-5px); /* Efek hover untuk item poster di halaman detail */
+    transform: translateY(-5px); /* Efek hover sedikit naik */
 }
 
 .poster-item img {
     width: 100%;
-    height: 300px; /* Tinggi gambar tetap seragam */
-    object-fit: cover;
-    display: block;
+    height: 300px; /* **Ukuran gambar yang Disesuaikan**: Tinggi tetap agar seragam */
+    object-fit: cover; /* Memotong gambar agar pas tanpa distorsi */
+    display: block; /* Menghilangkan spasi ekstra di bawah gambar */
 }
 
 .poster-caption {
     padding: 15px;
     font-size: 0.9em;
     color: var(--secondary-text-color);
-    flex-grow: 1;
+    flex-grow: 1; /* Biarkan caption mengambil sisa ruang */
 }
 
-/* Aturan untuk poster tunggal (poster 1 dan 4) */
-.poster-gallery > .poster-item { /* Target poster-item langsung di dalam poster-gallery */
-    max-width: 330px; /* Lebar maksimum untuk poster tunggal */
-    width: 100%;
-}
-
-/* Aturan untuk poster di baris tengah (poster 2 dan 3) */
-.poster-middle-row .poster-item {
-    flex: 1; /* Biarkan setiap poster mengambil ruang yang sama di dalam baris tengah */
-    max-width: calc(50% - 12.5px); /* Setengah lebar dikurangi setengah dari gap */
-    min-width: 280px; /* Minimal lebar agar tidak terlalu kecil di desktop */
-}
 
 .project-description {
     max-width: 800px;
@@ -465,64 +445,51 @@ footer {
     font-size: 1rem;
 }
 
+
 /* ==== Responsiveness (Media Queries) ==== */
 @media (max-width: 768px) {
     .hero h2 {
         font-size: 2rem;
     }
 
-    .navbar .logo {  
-        font-size: 1rem;  
-    }  
+    .navbar .logo {
+        font-size: 1rem;
+    }
 
-    .nav-links {  
-        gap: 1rem; /* Kurangi jarak antar link di navbar pada mobile */  
-    }  
+    .nav-links {
+        gap: 1rem; /* Kurangi jarak antar link di navbar pada mobile */
+    }
 
-    .project-card h3 {  
-        font-size: 1.1rem;  
-    }  
+    .project-card h3 {
+        font-size: 1.1rem;
+    }
 
-    /* Penyesuaian untuk contact info di mobile */  
-    .contact-info {  
-        font-size: 1em;  
-    }  
+    /* Penyesuaian untuk contact info di mobile */
+    .contact-info {
+        font-size: 1em;
+    }
 
-    #skills li {  
-        padding: 6px 12px; /* Lebih kecil lagi di mobile */  
-        font-size: 0.9em;  
-    }  
+    #skills li {
+        padding: 6px 12px; /* Lebih kecil lagi di mobile */
+        font-size: 0.9em;
+    }
 
-    .profile-pic {  
-        width: 150px; /* Lebih kecil di mobile */  
-        height: 150px;  
-        margin-top: 20px;  
-    }  
+    .profile-pic {
+        width: 150px; /* Lebih kecil di mobile */
+        height: 150px;
+        margin-top: 20px;
+    }
 
-    /* Responsiveness untuk Galeri Poster di halaman detail */  
-    .poster-gallery {  
-        gap: 20px;  
-    }  
-
-    .poster-middle-row {  
-        flex-direction: column; /* Ubah menjadi kolom di layar tablet */  
-        align-items: center;    /* Pusatkan item saat dalam satu kolom */  
-        gap: 20px;              /* Jarak antar poster */  
-        max-width: 330px; /* Ubah max-width agar sesuai dengan poster tunggal di atas/bawah */  
-    }  
-
-    .poster-gallery .poster-item,  
-    .poster-middle-row .poster-item {  
-        max-width: 100%; /* Ambil lebar penuh kontainer parent */  
-        min-width: unset; /* Hapus min-width */  
-    }  
-
-    .poster-item img {  
-        height: 250px; /* Tinggi gambar juga sedikit berkurang */  
-    }  
-
-    .project-detail-content {  
-        padding: 0 20px; /* Tambahkan padding horizontal untuk konten utama */  
+    /* Responsiveness untuk Galeri Poster di halaman detail */
+    .poster-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* Minimal lebar kolom lebih kecil di tablet */
+        gap: 20px;
+    }
+    .poster-item img {
+        height: 250px; /* Tinggi gambar juga sedikit berkurang */
+    }
+    .project-detail-content {
+        padding: 0 20px; /* Tambahkan padding horizontal untuk konten utama */
     }
 }
 
@@ -533,61 +500,55 @@ footer {
         padding: 10px 0;
     }
 
-    .nav-links {  
-        flex-wrap: wrap; /* Izinkan link nav-links wrapping */  
-        justify-content: center;  
-        gap: 0.8rem;  
-    }  
+    .nav-links {
+        flex-wrap: wrap; /* Izinkan link nav-links wrapping */
+        justify-content: center;
+        gap: 0.8rem;
+    }
 
-    .hero h2 {  
-        font-size: 1.8rem;  
-    }  
+    .hero h2 {
+        font-size: 1.8rem;
+    }
 
-    #about p {  
-        font-size: 0.9em;  
-    }  
+    #about p {
+        font-size: 0.9em;
+    }
 
-    .project-card {  
-        padding: 0.8rem;  
-    }  
+    .project-card {
+        padding: 0.8rem;
+    }
 
-    .btn-project {  
-        padding: 0.5rem 1rem;  
-        font-size: 0.9em;  
-    }  
+    .btn-project {
+        padding: 0.5rem 1rem;
+        font-size: 0.9em;
+    }
 
-    #contact p {  
-        font-size: 1em;  
-    }  
+    #contact p {
+        font-size: 1em;
+    }
 
-    .contact-info {  
-        font-size: 0.9em;  
-    }  
+    .contact-info {
+        font-size: 0.9em;
+    }
 
-    .profile-pic {  
-        width: 120px; /* Lebih kecil lagi di mobile */  
-        height: 120px;  
-    }  
+    .profile-pic {
+        width: 120px; /* Lebih kecil lagi di mobile */
+        height: 120px;
+    }
 
-    /* Responsiveness untuk Galeri Poster di halaman detail */  
-    .poster-gallery {  
-        gap: 15px;  
-    }  
-
-    .poster-middle-row {  
-        gap: 15px;  
-    }  
-
-    .poster-item img {  
-        height: 200px; /* Tinggi gambar lebih kecil lagi */  
-    }  
-
-    .project-detail-content {  
-        padding: 0 15px; /* Tambahkan sedikit padding horizontal pada konten */  
-    }  
-
-    .project-links {  
-        flex-direction: column; /* Tombol stack di mobile */  
-        gap: 10px;  
+    /* Responsiveness untuk Galeri Poster di halaman detail */
+    .poster-gallery {
+        grid-template-columns: 1fr; /* Satu kolom di layar sangat kecil (ponsel) */
+        gap: 15px;
+    }
+    .poster-item img {
+        height: 200px; /* Tinggi gambar lebih kecil lagi */
+    }
+    .project-detail-content {
+        padding: 0 15px; /* Tambahkan sedikit padding horizontal pada konten */
+    }
+    .project-links {
+        flex-direction: column; /* Tombol stack di mobile */
+        gap: 10px;
     }
 }
