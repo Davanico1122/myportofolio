@@ -311,23 +311,34 @@ footer {
 }
 
 .back-to-portfolio {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 30px;
-  color: var(--primary-color);
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
+  /* Properitas yang diubah/ditambahkan untuk menjadikannya tombol */
+  display: inline-block; /* Mengubah dari inline-flex menjadi inline-block untuk kontrol padding yang lebih umum */
+  padding: 10px 20px; /* Jarak di dalam tombol */
+  background-color: var(--primary-color); /* Menggunakan warna primary Anda sebagai latar belakang */
+  color: var(--button-text-color); /* Warna teks tombol, menggunakan variabel Anda */
+  text-decoration: none; /* Menghilangkan garis bawah default tautan */
+  border-radius: 5px; /* Membuat sudut tombol membulat */
+  border: none; /* Menghilangkan border default */
+  cursor: pointer; /* Mengubah kursor menjadi pointer saat diarahkan ke tombol */
+  font-weight: 600; /* Mempertahankan font-weight yang sudah ada */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Transisi untuk hover */
+  margin-bottom: 30px; /* Mempertahankan margin-bottom yang sudah ada */
+  
+  /* Reset properti yang mungkin tidak diperlukan lagi untuk tombol */
+  align-items: center; /* Tidak diperlukan lagi dengan display: inline-block */
+  gap: 8px; /* Panah akan ditangani oleh margin-right pada ikonnya */
 }
 
 .back-to-portfolio i {
-  font-size: 1em;
+  font-size: 1em; /* Ukuran ikon tetap */
+  margin-right: 8px; /* Memberi jarak antara ikon panah dan teks */
+  color: inherit; /* Menggunakan warna teks tombol, bukan primary-color terpisah */
 }
 
 .back-to-portfolio:hover {
-  color: var(--secondary-color);
-  text-decoration: underline;
+  background-color: var(--secondary-color); /* Warna latar belakang saat di-hover, menggunakan secondary-color Anda */
+  color: var(--button-text-color); /* Memastikan teks tetap putih saat hover */
+  text-decoration: none; /* Memastikan tidak ada garis bawah saat hover */
 }
 
 .project-hero {
