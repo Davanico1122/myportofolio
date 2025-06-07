@@ -200,14 +200,14 @@ body {
     padding: 1rem;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease; /* Transisi untuk efek hover */
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Untuk mendorong tombol ke bawah */
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) scale(1.03); /* Menggeser ke atas sedikit dan mengembang 3% */
 }
 
 .project-card img {
@@ -370,7 +370,6 @@ footer {
     flex-direction: column;    /* Menumpuk item (baris poster) secara vertikal */
     align-items: center;       /* Memusatkan setiap item (baris) secara horizontal */
     gap: 25px;                 /* Jarak vertikal antara setiap baris/kelompok poster */
-    /* Hapus properti grid-template-columns dan justify-content yang mungkin ada dari versi sebelumnya jika ada konflik */
 }
 
 /* Ini adalah kontainer baru untuk dua poster di tengah */
@@ -394,7 +393,7 @@ footer {
 }
 
 .poster-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* Efek hover untuk item poster di halaman detail */
 }
 
 .poster-item img {
