@@ -1,21 +1,48 @@
-# Security Policy
+# Kebijakan Keamanan
 
-## Supported Versions
+Kami menganggap serius keamanan proyek kami. Halaman ini menjelaskan kebijakan keamanan kami dan panduan untuk melaporkan kerentanan keamanan.
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+## Versi yang Didukung
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+Berikut adalah versi proyek kami yang saat ini didukung dengan pembaruan keamanan. Kami sangat menganjurkan Anda untuk selalu menggunakan versi terbaru yang didukung.
 
-## Reporting a Vulnerability
+| Versi | Didukung |
+| :---- | :------- |
+| 5.1.x | ✅ Ya      |
+| 5.0.x | ❌ Tidak   |
+| 4.0.x | ❌ Tidak   |
+| < 4.0 | ❌ Tidak   |
 
-Use this section to tell people how to report a vulnerability.
+**Catatan:** Versi yang tidak didukung mungkin memiliki kerentanan yang diketahui dan tidak akan menerima perbaikan keamanan lebih lanjut.
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+## Melaporkan Kerentanan
+
+Kami sangat menghargai upaya peneliti keamanan dan komunitas yang membantu kami meningkatkan keamanan proyek ini. Jika Anda menemukan kerentanan keamanan, harap laporkan kepada kami sesegera mungkin secara bertanggung jawab.
+
+**Bagaimana cara melaporkan kerentanan?**
+
+Harap laporkan kerentanan keamanan dengan mengirimkan email ke: **[davaniko40@gmail.com]**
+
+**Mohon sertakan informasi berikut dalam laporan Anda:**
+
+* **Deskripsi kerentanan:** Jelaskan secara singkat dan jelas sifat kerentanan.
+* **Langkah-langkah untuk mereproduksi:** Berikan langkah-langkah yang jelas untuk mereproduksi kerentanan. Jika memungkinkan, sertakan kode, URL, atau konfigurasi yang relevan.
+* **Dampak potensial:** Jelaskan potensi dampak dari kerentanan ini.
+* **Versi yang terpengaruh:** Sebutkan versi proyek yang Anda yakini terpengaruh.
+* **Konfigurasi lingkungan (jika relevan):** Informasi tentang sistem operasi, browser, atau dependensi lain yang mungkin relevan.
+
+**Apa yang dapat Anda harapkan setelah melaporkan?**
+
+Setelah menerima laporan Anda, kami akan:
+
+1.  **Mengirimkan konfirmasi penerimaan** dalam waktu **2 hari kerja**.
+2.  **Menganalisis dan memvalidasi** kerentanan.
+3.  **Memberikan pembaruan status** dalam waktu **7 hari kerja** mengenai temuan awal kami dan rencana tindakan.
+4.  **Bekerja untuk mengatasi kerentanan** dan akan memberi tahu Anda tentang kemajuan.
+5.  **Memberi tahu Anda setelah perbaikan dirilis.** Kami meminta Anda untuk menahan diri dari mengungkapkan kerentanan secara publik sampai kami merilis perbaikan.
+
+**Kebijakan Pengungkapan Publik:**
+
+Kami meminta Anda untuk tidak mengungkapkan kerentanan secara publik sampai kami memiliki kesempatan untuk menyelidiki, mengatasi, dan merilis perbaikan. Setelah perbaikan tersedia, Anda bebas untuk mengungkapkan temuan Anda. Kami akan dengan senang hati mengakui kontribusi Anda dalam catatan rilis atau di tempat lain yang sesuai (jika Anda setuju).
+
+Terima kasih atas kerja sama Anda dalam menjaga keamanan proyek kami.
