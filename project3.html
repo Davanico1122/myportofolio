@@ -1,56 +1,84 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Detail Project 3</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detail Proyek: UI/UX Design - Davanico Ady Nugroho</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
-<body>
-  <header>
-    <h1>Davanico Ady Nugroho</h1>
-    <nav>
-      <a href="index.html">About</a>
-      <a href="#skill">Skill</a>
-      <a href="index.html#project">Project</a>
-      <a href="#contact">Contact</a>
-      <button onclick="toggleDarkMode()">🌙</button>
-    </nav>
-  </header>
-
-  <main>
-    <a href="index.html" class="back-link">← Kembali ke Portofolio</a>
-    <h2>Detail Project 3</h2>
-    <p>Berikut adalah dokumentasi visual dari project ini:</p>
-
-    <div class="project-grid">
-      <div class="card">
-        <img src="img/gambar1.jpg" alt="Deskripsi Gambar 1">
-        <h3>Deskripsi Gambar 1</h3>
-        <p>Keterangan gambar pertama.</p>
-      </div>
-      <div class="card">
-        <img src="img/gambar2.jpg" alt="Deskripsi Gambar 2">
-        <h3>Deskripsi Gambar 2</h3>
-        <p>Keterangan gambar kedua.</p>
-      </div>
-      <div class="card">
-        <img src="img/gambar3.jpg" alt="Deskripsi Gambar 3">
-        <h3>Deskripsi Gambar 3</h3>
-        <p>Keterangan gambar ketiga.</p>
-      </div>
-      <div class="card">
-        <img src="img/gambar4.jpg" alt="Deskripsi Gambar 4">
-        <h3>Deskripsi Gambar 4</h3>
-        <p>Keterangan gambar keempat.</p>
-      </div>
+<body class="project-detail-page">
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <div class="logo">Davanico Ady Nugroho</div>
+      <ul class="nav-links">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#skills">Skill</a></li>
+        <li><a href="index.html#projects">Project</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><button id="theme-toggle">🌓</button></li>
+      </ul>
     </div>
+  </nav>
+
+  <main class="container project-detail-content">
+    <a href="index.html#projects" class="back-to-portfolio" data-aos="fade-right"><i class="fas fa-arrow-left"></i> Kembali ke Portofolio</a>
+
+    <section class="project-hero" data-aos="fade-up">
+      <h1 class="project-title">DESAIN UI/UX</h1>
+      <p>Berbagai contoh desain antarmuka pengguna (UI) dan pengalaman pengguna (UX) yang telah saya buat.</p>
+    </section>
+
+    <section class="poster-gallery-section">
+      <div class="poster-gallery">
+        <div class="poster-item" data-aos="fade-up" data-aos-delay="0">
+          <img src="assets/uiux1.jpg" alt="UI/UX 1" />
+          <p class="poster-caption">Desain aplikasi mobile.</p>
+        </div>
+        <div class="poster-item" data-aos="fade-up" data-aos-delay="100">
+          <img src="assets/uiux2.jpg" alt="UI/UX 2" />
+          <p class="poster-caption">Desain website e-commerce.</p>
+        </div>
+        <div class="poster-item" data-aos="fade-up" data-aos-delay="200">
+          <img src="assets/uiux3.jpg" alt="UI/UX 3" />
+          <p class="poster-caption">Prototipe interaktif.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="project-description" data-aos="fade-up" data-aos-delay="300">
+      <h3>Tentang Proyek ini</h3>
+      <p>Proyek <strong>"DESAIN UI/UX"</strong> berfokus pada bagaimana menciptakan pengalaman pengguna yang intuitif dan antarmuka yang estetis, fungsional, dan mudah digunakan.</p>
+
+      <h3>Fitur Utama:</h3>
+      <ul>
+        <li>Responsif dan mobile-friendly</li>
+        <li>UX research dan wireframing</li>
+        <li>High fidelity mockup</li>
+      </ul>
+
+      <h3>Teknologi/Alat yang Digunakan:</h3>
+      <ul class="skills">
+        <li>Figma</li>
+        <li>Adobe XD</li>
+        <li>Sketch</li>
+      </ul>
+
+      <div class="project-links">
+        <a href="#" class="btn-project">Lihat Demo Live</a>
+        <a href="https://github.com/Davanico1122" class="btn-project secondary">Lihat di GitHub</a>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <p>© 2025 Davanico Ady Nugroho</p>
+  <footer data-aos="fade-up">
+    <p>&copy; 2025 Davanico Ady Nugroho</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ duration: 1000, once: true });</script>
 </body>
 </html>
