@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
 
-/* === Tema Warna === */
 :root {
   --bg-color: #ffffff;
   --text-color: #6b7280;
   --primary-color: #000000;
   --secondary-color: #4b5563;
   --card-bg: #f9fafb;
-  --border-color: rgba(0, 0, 0, 0.05);
+  --border-color: rgba(0,0,0,0.05);
   --secondary-text-color: #6b7280;
   --button-text-color: #ffffff;
   --link-color: #000000;
@@ -20,14 +19,13 @@
   --primary-color: #8b5cf6;
   --secondary-color: #ec4899;
   --card-bg: #1a1a1a;
-  --border-color: rgba(255, 255, 255, 0.1);
+  --border-color: rgba(255,255,255,0.1);
   --secondary-text-color: #aaa;
   --button-text-color: #fff;
   --link-color: var(--primary-color);
   --link-hover-color: var(--secondary-color);
 }
 
-/* === Reset & Dasar === */
 *,
 *::before,
 *::after {
@@ -41,11 +39,8 @@ body {
   color: var(--text-color);
   line-height: 1.6;
   scroll-behavior: smooth;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-/* === Container === */
 .container {
   width: 90%;
   max-width: 1200px;
@@ -53,7 +48,8 @@ body {
   padding: 5rem 0 6rem;
 }
 
-/* === Navbar === */
+/* Navbar */
+
 .navbar {
   position: sticky;
   top: 0;
@@ -75,15 +71,12 @@ body {
   font-size: 1.5rem;
   color: var(--primary-color);
   text-decoration: none;
-  user-select: none;
 }
 
-/* Nav Links (desktop) */
 .nav-links {
   display: none;
 }
 
-/* Hamburger Menu Toggle */
 .menu-toggle {
   width: 28px;
   height: 24px;
@@ -114,7 +107,9 @@ body {
   transform: rotate(-45deg);
 }
 
-/* Sidebar Menu */
+
+/* Sidebar */
+
 .sidebar-menu {
   position: fixed;
   top: 0;
@@ -123,13 +118,11 @@ body {
   height: 100vh;
   background-color: var(--bg-color);
   box-shadow: -4px 0 12px rgba(0,0,0,0.1);
-  border-radius: 0 0.75rem 0.75rem 0;
   padding: 2rem 1.5rem;
   display: flex;
   flex-direction: column;
   transition: right 0.3s ease;
   z-index: 11000;
-  outline: none;
 }
 .sidebar-menu.open {
   right: 0;
@@ -166,7 +159,6 @@ body {
   outline: 2px solid var(--primary-color);
 }
 
-/* Close sidebar button */
 .sidebar-close {
   align-self: flex-end;
   font-size: 1.5rem;
@@ -177,8 +169,9 @@ body {
   user-select: none;
 }
 
-/* Desktop nav links visible on wider screens */
-@media (min-width: 769px) {
+/* Desktop nav */
+
+@media(min-width: 769px) {
   .menu-toggle {
     display: none;
   }
@@ -208,7 +201,8 @@ body {
   }
 }
 
-/* === Hero section === */
+/* Hero */
+
 .hero {
   text-align: center;
   padding-top: 4rem;
@@ -218,7 +212,6 @@ body {
 .hero h1 {
   font-weight: 800;
   font-size: 3rem;
-  line-height: 1.1;
   margin-bottom: 1rem;
   color: var(--primary-color);
 }
@@ -230,7 +223,8 @@ body {
   color: var(--secondary-text-color);
 }
 
-/* Profile Picture */
+/* Profile */
+
 .profile-pic {
   width: 140px;
   height: 140px;
@@ -247,6 +241,7 @@ body {
 }
 
 /* Section Titles */
+
 h2 {
   font-weight: 700;
   font-size: 2.2rem;
@@ -255,7 +250,8 @@ h2 {
   color: var(--primary-color);
 }
 
-/* About Section */
+/* About */
+
 #about p {
   max-width: 800px;
   margin: 0 auto;
@@ -265,7 +261,8 @@ h2 {
   line-height: 1.6;
 }
 
-/* Skills Section */
+/* Skills */
+
 #skills ul {
   list-style: none;
   padding: 0;
@@ -290,7 +287,8 @@ h2 {
   transform: translateY(-3px);
 }
 
-/* Projects Section */
+/* Projects */
+
 .projects-grid {
   display: grid;
   gap: 2rem;
@@ -350,6 +348,7 @@ h2 {
 }
 
 /* Testimonials */
+
 #testimonials {
   background-color: var(--card-bg);
   border-radius: 0.75rem;
@@ -368,6 +367,7 @@ h2 {
 }
 
 /* Additional Projects */
+
 #additional-projects {
   margin: 4rem auto;
   padding: 1rem 2rem 3rem 2rem;
@@ -412,6 +412,7 @@ h2 {
 }
 
 /* Contact Section */
+
 #contact {
   text-align: center;
   margin: 4rem 0 0 0;
@@ -434,11 +435,11 @@ h2 {
   color: var(--text-color);
 }
 .contact-info p {
-  margin: 0;
   display: flex;
   gap: 0.5rem;
   align-items: center;
   white-space: nowrap;
+  margin: 0;
 }
 .contact-info a {
   color: var(--link-color);
@@ -458,6 +459,7 @@ h2 {
 }
 
 /* Footer */
+
 footer {
   text-align: center;
   padding: 3rem 1rem;
@@ -468,6 +470,7 @@ footer {
 }
 
 /* Responsiveness */
+
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 2rem;
@@ -491,4 +494,5 @@ footer {
   .additional-project-card img {
     max-height: 100px;
   }
-}
+    }
+  
