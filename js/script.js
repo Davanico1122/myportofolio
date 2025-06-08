@@ -1,12 +1,11 @@
-document.addEventListener('DOMContentLoaded', () => {
+ocument.addEventListener('DOMContentLoaded', () => {
     // Ambil elemen-elemen yang diperlukan
     const menuToggle = document.getElementById('menu-toggle');
-    const sidebar = document.getElementById('sidebar'); // ID di HTML sekarang 'sidebar'
-    const closeSidebarButton = document.getElementById('close-sidebar'); // ID di HTML sekarang 'close-sidebar'
-
+    const sidebar = document.getElementById('sidebar');
+    const closeSidebarButton = document.getElementById('close-sidebar');
     const htmlElement = document.documentElement;
-    const themeToggle = document.getElementById('theme-toggle'); // Tombol di navbar desktop
-    const sidebarThemeToggle = document.getElementById('sidebar-theme-toggle'); // Tombol di sidebar mobile
+    const themeToggle = document.getElementById('theme-toggle');
+    const sidebarThemeToggle = document.getElementById('sidebar-theme-toggle');
 
     // --- Sidebar Toggle (Hamburger Menu) ---
     if (menuToggle && sidebar && closeSidebarButton) {
