@@ -1,96 +1,93 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // --- Theme Toggle ---
-    const themeToggle = document.getElementById('theme-toggle');
-    const sidebarThemeToggle = document.getElementById('sidebar-theme-toggle');
-    const htmlElement = document.documentElement; // Mengambil elemen <html>
+  const menuToggle = document.getElementById('menu-toggle');
+  const sidebarMenu = document.getElementById('sidebar-menu');
+  const sidebarClose = document.getElementById('sidebar-close');
+  const htmlElement = document.documentElement;
+  const themeToggle = document.getElementById('theme-toggle');
+  const sidebarThemeToggle = document.getElementById('sidebar-theme-toggle');
 
-    if (themeToggle || sidebarThemeToggle) { // Pastikan tombol toggle ada di HTML
-        // Cek preferensi tema dari local storage saat halaman dimuat
-        const savedTheme = localStorage.getItem('theme');
+  // Sidebar toggle open/close with ARIA update
+  menuToggle.addEventListener('click', () => {
+    const isOpen = menuToggle.getAttribute('aria-expanded') === 'true';
+    menuToggle.setAttribute('aria-expanded', !isOpen);
 
-        if (savedTheme) {
-            // Jika ada tema yang disimpan, terapkan
-            htmlElement.setAttribute('data-theme', savedTheme);
-        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            // Jika tidak ada di local storage, cek preferensi sistem operasi
-            htmlElement.setAttribute('data-theme', 'dark');
-            localStorage.setItem('theme', 'dark'); // Simpan preferensi sistem sebagai default
-        } else {
-            // Default ke tema terang jika tidak ada preferensi
-            htmlElement.setAttribute('data-theme', 'light');
-            localStorage.setItem('theme', 'light'); // Simpan preferensi default
-        }
-
-        // Tambahkan event listener untuk tombol toggle
-        const toggleTheme = () => {
-            let currentTheme = htmlElement.getAttribute('data-theme');
-            if (currentTheme === 'dark') {
-                htmlElement.setAttribute('data-theme', 'light');
-                localStorage.setItem('theme', 'light'); // Simpan preferensi ke local storage
-            } else {
-                htmlElement.setAttribute('data-theme', 'dark');
-                localStorage.setItem('theme', 'dark'); // Simpan preferensi ke local storage
-            }
-        };
-
-        themeToggle.addEventListener('click', toggleTheme);
-        sidebarThemeToggle.addEventListener('click', toggleTheme);
+    if (sidebarMenu.hasAttribute('hidden')) {
+      sidebarMenu.removeAttribute('hidden');
+      sidebarMenu.classList.add('open');
+      sidebarMenu.focus();
+    } else {
+      sidebarMenu.setAttribute('hidden', '');
+      sidebarMenu.classList.remove('open');
     }
+  });
 
-    // --- Navbar Hide/Show on Scroll ---
-    let lastScrollY = window.scrollY;
-    const navbar = document.querySelector('.navbar');
+  // Sidebar close button
+  sidebarClose.addEventListener('click', () => {
+    sidebarMenu.setAttribute('hidden', '');
+    sidebarMenu.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', false);
+    menuToggle.focus();
+  });
 
-    if (navbar) { // Pastikan navbar ada di HTML
-        window.addEventListener('scroll', () => {
-            // Jangan sembunyikan navbar jika di paling atas halaman
-            if (window.scrollY === 0) {
-                navbar.style.top = '0';
-            } else if (window.scrollY > lastScrollY && window.scrollY > 100) {
-                // Scrolling ke bawah dan sudah melewati 100px dari atas
-                navbar.style.top = '-80px'; // Sesuaikan ini dengan tinggi navbar Anda
-            } else {
-                // Scrolling ke atas
-                navbar.style.top = '0';
-            }
-            lastScrollY = window.scrollY;
-        });
-    }
-
-    // --- Smooth Scroll for Internal Links ---
-    // Mencegah perilaku default (loncat) dan membuat scroll halus ke target ID
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault(); // Mencegah loncat langsung
-
-            const targetId = this.getAttribute('href');
-            // Cek apakah target bukan hanya '#' kosong
-            if (targetId && targetId !== '#') {
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) { // Pastikan elemen target ada
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth' // Membuat scroll menjadi halus
-                    });
-                }
-            }
-        });
+  // Close sidebar on link or theme toggle click
+  sidebarMenu.querySelectorAll('a, button#sidebar-theme-toggle').forEach(el => {
+    el.addEventListener('click', () => {
+      sidebarMenu.setAttribute('hidden', '');
+      sidebarMenu.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', false);
+      menuToggle.focus();
     });
+  });
 
-    // --- Menu Toggle ---
-    const menuToggle = document.getElementById('menu-toggle');
-    const sidebarMenu = document.getElementById('sidebar-menu');
-
-    if (menuToggle) { // Pastikan tombol toggle ada di HTML
-        menuToggle.addEventListener('click', () => {
-            const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
-            menuToggle.setAttribute('aria-expanded', !expanded);
-            sidebarMenu.classList.toggle('open');
-            if (sidebarMenu.classList.contains('open')) {
-                sidebarMenu.removeAttribute('hidden');
-                sidebarMenu.focus();
-            } else {
-                sidebarMenu.setAttribute('hidden', '');
-            }
-        });
+  // Theme toggle function
+  function toggleTheme() {
+    const current = htmlElement.getAttribute('data-theme');
+    if (current === 'dark') {
+      htmlElement.setAttribute('data-theme', 'light');
+      localStorage.setItem('theme', 'light');
+    } else {
+      htmlElement.setAttribute('data-theme', 'dark');
+      localStorage.setItem('theme', 'dark');
     }
+  }
+  themeToggle.addEventListener('click', toggleTheme);
+  sidebarThemeToggle.addEventListener('click', toggleTheme);
+
+  // Load saved or system theme on load
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    htmlElement.setAttribute('data-theme', savedTheme);
+  } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    htmlElement.setAttribute('data-theme', 'dark');
+  }
+
+  // Navbar hide/show on scroll
+  let lastScrollY = window.scrollY;
+  const navbar = document.querySelector('.navbar');
+  if (navbar) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY === 0) {
+        navbar.style.top = '0';
+      } else if (window.scrollY > lastScrollY && window.scrollY > 100) {
+        navbar.style.top = '-80px';
+      } else {
+        navbar.style.top = '0';
+      }
+      lastScrollY = window.scrollY;
+    });
+  }
+
+  // Smooth scroll for internal links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e){
+      e.preventDefault();
+      const targetId = this.getAttribute('href');
+      if(targetId && targetId !== '#'){
+        const targetElem = document.querySelector(targetId);
+        if(targetElem){
+          targetElem.scrollIntoView({behavior: 'smooth'});
+        }
+      }
+    });
+  });
 });
