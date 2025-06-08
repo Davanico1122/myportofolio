@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Davanico Ady Nugroho - Portofolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/styles.css" />
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
@@ -12,7 +12,7 @@
 <body>
     <!-- Navbar -->
     <nav class="navbar" id="navbar">
-        <div class="container">
+        <div class="navbar-container">
             <a href="#" class="logo" data-aos="fade-right">Davanico Ady Nugroho</a>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
@@ -21,25 +21,8 @@
                 <li><a href="#contact">Contact</a></li>
                 <li><button id="theme-toggle" aria-label="Toggle theme">🌓</button></li>
             </ul>
-            <!-- Optional: Hamburger Menu for Mobile (if JS and CSS support it) -->
-            <button class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" style="display:none;">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
         </div>
     </nav>
-    <!-- Mobile Sidebar (if using hamburger menu) -->
-    <aside class="sidebar-menu" id="sidebar" hidden tabindex="-1">
-        <button class="close-sidebar" id="close-sidebar" aria-label="Close menu">&times;</button>
-        <ul>
-            <li><a href="#about" class="sidebar-link">About</a></li>
-            <li><a href="#skills" class="sidebar-link">Skill</a></li>
-            <li><a href="#projects" class="sidebar-link">Project</a></li>
-            <li><a href="#contact" class="sidebar-link">Contact</a></li>
-            <li><button id="sidebar-theme-toggle" class="sidebar-link" aria-label="Toggle theme">🌓</button></li>
-        </ul>
-    </aside>
 
     <!-- Hero Section -->
     <header class="hero" id="hero">
