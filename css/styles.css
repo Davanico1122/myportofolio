@@ -26,9 +26,8 @@
   --link-hover-color: var(--secondary-color);
 }
 
-*,
-*::before,
-*::after {
+/* Reset and base styles */
+*, *::before, *::after {
   box-sizing: border-box;
 }
 body {
@@ -107,7 +106,6 @@ body {
   transform: rotate(-45deg);
 }
 
-
 /* Sidebar */
 
 .sidebar-menu {
@@ -123,6 +121,7 @@ body {
   flex-direction: column;
   transition: right 0.3s ease;
   z-index: 11000;
+  outline: none;
 }
 .sidebar-menu.open {
   right: 0;
@@ -169,8 +168,7 @@ body {
   user-select: none;
 }
 
-/* Desktop nav */
-
+/* Desktop nav visible */
 @media(min-width: 769px) {
   .menu-toggle {
     display: none;
@@ -201,7 +199,7 @@ body {
   }
 }
 
-/* Hero */
+/* Hero Section */
 
 .hero {
   text-align: center;
@@ -212,6 +210,7 @@ body {
 .hero h1 {
   font-weight: 800;
   font-size: 3rem;
+  line-height: 1.1;
   margin-bottom: 1rem;
   color: var(--primary-color);
 }
@@ -223,7 +222,7 @@ body {
   color: var(--secondary-text-color);
 }
 
-/* Profile */
+/* Profile Picture */
 
 .profile-pic {
   width: 140px;
@@ -250,7 +249,7 @@ h2 {
   color: var(--primary-color);
 }
 
-/* About */
+/* About Section */
 
 #about p {
   max-width: 800px;
@@ -261,7 +260,7 @@ h2 {
   line-height: 1.6;
 }
 
-/* Skills */
+/* Skills Section */
 
 #skills ul {
   list-style: none;
@@ -287,7 +286,7 @@ h2 {
   transform: translateY(-3px);
 }
 
-/* Projects */
+/* Projects Section */
 
 .projects-grid {
   display: grid;
@@ -494,5 +493,4 @@ footer {
   .additional-project-card img {
     max-height: 100px;
   }
-    }
-  
+}
