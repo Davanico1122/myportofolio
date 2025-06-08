@@ -1,84 +1,115 @@
 <!DOCTYPE html>
 <html lang="id" data-theme="light">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Detail Proyek: UI/UX Design - Davanico Ady Nugroho</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="css/styles.css" />
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Detail Proyek 3: DESAIN POSTER - Davanico Ady Nugroho</title> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+
+    <script src="assets/js/script.js"></script>
+
 </head>
-<body class="project-detail-page">
-  <nav class="navbar" id="navbar">
-    <div class="container">
-      <div class="logo">Davanico Ady Nugroho</div>
-      <ul class="nav-links">
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#skills">Skill</a></li>
-        <li><a href="index.html#projects">Project</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-        <li><button id="theme-toggle">🌓</button></li>
-      </ul>
-    </div>
-  </nav>
+<body>
+    <header>
+        <nav class="navbar" role="navigation" aria-label="Primary Navigation">
+            <a href="index.html" class="logo">Davanico Ady Nugroho</a>
+            <button class="menu-toggle" aria-label="Toggle menu" aria-controls="sidebar-menu" aria-expanded="false" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links desktop-nav" role="menubar" aria-label="Primary navigation links">
+                <li><a href="index.html#about" role="menuitem">About</a></li>
+                <li><a href="index.html#skills" role="menuitem">Skill</a></li>
+                <li><a href="index.html#projects" role="menuitem">Project</a></li>
+                <li><a href="index.html#testimonials" role="menuitem">Testimoni</a></li>
+                <li><a href="index.html#additional-projects" role="menuitem">Additional</a></li>
+                <li><a href="index.html#contact" role="menuitem">Contact</a></li>
+                <li><button id="theme-toggle" aria-label="Toggle theme">🌓</button></li>
+            </ul>
+        </nav>
+        <aside class="sidebar-menu" id="sidebar">
+            <button class="close-sidebar" aria-label="Close menu" id="close-sidebar">&times;</button>
+            <ul role="menu">
+                <li><a href="index.html#about" role="menuitem" class="sidebar-link">About</a></li>
+                <li><a href="index.html#skills" role="menuitem" class="sidebar-link">Skill</a></li>
+                <li><a href="index.html#projects" role="menuitem" class="sidebar-link">Project</a></li>
+                <li><a href="index.html#testimonials" role="menuitem" class="sidebar-link">Testimoni</a></li>
+                <li><a href="index.html#additional-projects" role="menuitem" class="sidebar-link">Additional</a></li>
+                <li><a href="index.html#contact" role="menuitem" class="sidebar-link">Contact</a></li>
+                <li><button id="sidebar-theme-toggle" class="sidebar-link" aria-label="Toggle theme">🌓</button></li>
+            </ul>
+        </aside>
+    </header>
 
-  <main class="container project-detail-content">
-    <a href="index.html#projects" class="back-to-portfolio" data-aos="fade-right"><i class="fas fa-arrow-left"></i> Kembali ke Portofolio</a>
+    <main class="container project-detail-content" role="main">
+        <a href="index.html#projects" class="back-to-portfolio" aria-label="Kembali ke Portofolio" data-aos="fade-right">
+            <i class="fas fa-arrow-left"></i> Kembali ke Portofolio
+        </a>
 
-    <section class="project-hero" data-aos="fade-up">
-      <h1 class="project-title">DESAIN UI/UX</h1>
-      <p>Berbagai contoh desain antarmuka pengguna (UI) dan pengalaman pengguna (UX) yang telah saya buat.</p>
-    </section>
+        <section class="project-hero" data-aos="fade-up" aria-label="Judul dan deskripsi proyek">
+            <h1 class="project-title">DESAIN GRAFIS</h1>
+            <p>Kumpulan berbagai desain grafis yang mencakup ilustrasi, logo, dan branding.</p>
+        </section>
 
-    <section class="poster-gallery-section" data-aos="fade-up" aria-label="Galeri gambar proyek">
-      <div class="poster-gallery">
-        <div class="poster-item" data-aos="fade-up" data-aos-delay="0">
-          <img src="assets/uiux1.jpg" alt="UI/UX 1" />
-          <p class="poster-caption">Desain aplikasi mobile.</p>
-        </div>
-        <div class="poster-item" data-aos="fade-up" data-aos-delay="100">
-          <img src="assets/uiux2.jpg" alt="UI/UX 2" />
-          <p class="poster-caption">Desain website e-commerce.</p>
-        </div>
-        <div class="poster-item" data-aos="fade-up" data-aos-delay="200">
-          <img src="assets/uiux3.jpg" alt="UI/UX 3" />
-          <p class="poster-caption">Prototipe interaktif.</p>
-        </div>
-      </div>
-    </section>
+        <section class="poster-gallery-section" data-aos="fade-up" aria-label="Galeri gambar proyek">
+            <div class="poster-gallery">
+                <div class="poster-item" data-aos="fade-up" data-aos-delay="0">
+                    <img src="assets/project3_1.jpg" alt="Desain Grafis 1" />
+                    <p class="poster-caption">Ilustrasi digital</p>
+                </div>
+                <div class="poster-item" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/project3_2.jpg" alt="Desain Grafis 2" />
+                    <p class="poster-caption">Desain logo perusahaan</p>
+                </div>
+                <div class="poster-item" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/project3_3.jpg" alt="Desain Grafis 3" />
+                    <p class="poster-caption">Branding guide</p>
+                </div>
+                <div class="poster-item" data-aos="fade-up" data-aos-delay="300">
+                    <img src="assets/project3_4.jpg" alt="Desain Grafis 4" />
+                    <p class="poster-caption">Infografis edukasi</p> </div>
+            </div>
+        </section>
 
-    <section class="project-description" data-aos="fade-up" data-aos-delay="300">
-      <h3>Tentang Proyek ini</h3>
-      <p>Proyek <strong>"DESAIN UI/UX"</strong> berfokus pada bagaimana menciptakan pengalaman pengguna yang intuitif dan antarmuka yang estetis, fungsional, dan mudah digunakan.</p>
+        <section class="project-description" data-aos="fade-up" data-aos-delay="300">
+            <h3>Tentang Proyek ini</h3>
+            <p>Proyek <strong>"DESAIN GRAFIS"</strong> mengeksplorasi berbagai bentuk visual untuk tujuan komunikasi, seni, dan pemasaran.</p>
 
-      <h3>Fitur Utama:</h3>
-      <ul>
-        <li>Responsif dan mobile-friendly</li>
-        <li>UX research dan wireframing</li>
-        <li>High fidelity mockup</li>
-      </ul>
+            <h3>Cakupan Proyek:</h3>
+            <ul>
+                <li>Ilustrasi Digital</li>
+                <li>Desain Logo & Branding</li>
+                <li>Layout Publikasi</li>
+                <li>Desain Infografis</li>
+            </ul>
 
-      <h3>Teknologi/Alat yang Digunakan:</h3>
-      <ul class="skills">
-        <li>Figma</li>
-        <li>Adobe XD</li>
-        <li>Sketch</li>
-      </ul>
+            <h3>Teknologi/Alat yang Digunakan:</h3>
+            <ul class="skills">
+                <li>Adobe Illustrator</li>
+                <li>Adobe Photoshop</li>
+                <li>CorelDRAW</li>
+            </ul>
 
-      <div class="project-links">
-        <a href="#" class="btn-project">Lihat Demo Live</a>
-        <a href="https://github.com/Davanico1122" class="btn-project secondary">Lihat di GitHub</a>
-      </div>
-    </section>
-  </main>
+            <div class="project-links">
+                <a href="#" class="btn-project">Lihat Demo Live</a>
+                <a href="https://github.com/Davanico1122" class="btn-project secondary" target="_blank" rel="noopener noreferrer">Lihat di GitHub</a>
+            </div>
+        </section>
+    </main>
 
-  <footer data-aos="fade-up">
-    <p>&copy; 2025 Davanico Ady Nugroho</p>
-  </footer>
+    <footer role="contentinfo" data-aos="fade-up">
+        <p>&copy; 2025 Davanico Ady Nugroho</p>
+    </footer>
 
-  <script src="js/script.js"></script>
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>AOS.init({ duration: 1000, once: true });</script>
-</body>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+    </body>
 </html>
