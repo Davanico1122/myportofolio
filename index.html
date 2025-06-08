@@ -198,7 +198,6 @@
       </button>
 
       <ul class="nav-links desktop-nav" role="menubar" aria-label="Primary navigation links">
-        <!-- visible only on wider screens -->
         <li role="none"><a href="#about" role="menuitem">About</a></li>
         <li role="none"><a href="#skills" role="menuitem">Skill</a></li>
         <li role="none"><a href="#projects" role="menuitem">Project</a></li>
@@ -231,7 +230,84 @@
       <img src="assets/profile.JPG" alt="Foto Profil Davanico" class="profile-pic" />
     </header>
 
-    <!-- Other sections (About, Skills, Projects, etc) here... same as before -->
+    <section id="about" tabindex="-1" data-aos="fade-up" aria-labelledby="about-title">
+      <h2 id="about-title">About Me</h2>
+      <p>Saya punya ketertarikan besar pada dunia pengembangan web. Saya suka sekali merancang dan membangun website yang terlihat modern, terasa interaktif saat digunakan, dan tentu saja memiliki estetika yang menarik. Bagi saya, kepuasan pengguna adalah yang terpenting, dan saya selalu berusaha memberikan pengalaman terbaik melalui karya-karya saya.</p>
+    </section>
+
+    <section id="skills" tabindex="-1" data-aos="fade-up" aria-labelledby="skills-title">
+      <h2 id="skills-title">Skill</h2>
+      <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>Figma / UI Design</li>
+        <li>GitHub</li>
+        <li>Corel Draw</li>
+      </ul>
+    </section>
+
+    <section id="projects" tabindex="-1" data-aos="fade-up" aria-labelledby="projects-title">
+      <h2 id="projects-title">Project</h2>
+      <div class="projects-grid" role="list">
+        <article class="project-card" data-aos="fade-up" role="listitem">
+          <img src="assets/project1.jpg" alt="Design Poster" />
+          <h3>DESIGN POSTER</h3>
+          <p>Selamat datang di design poster saya ini, tempat di mana ide-ide bertemu visual! Setiap poster dibuat untuk tidak hanya enak dipandang, tapi juga mampu menyampaikan pesan secara efektif dan menarik.</p>
+          <a href="project1.html" class="btn-project" aria-label="Lihat detail project Design Poster">Lihat Detail</a>
+        </article>
+        <article class="project-card" data-aos="fade-up" role="listitem">
+          <img src="assets/project2.jpg" alt="Portofolio Pribadi" />
+          <h3>Portofolio Pribadi</h3>
+          <p>Template portofolio pribadi modern dan interaktif, dirancang untuk menampilkan karya secara profesional.</p>
+          <a href="project2.html" class="btn-project" aria-label="Lihat detail project Portofolio Pribadi">Lihat Detail</a>
+        </article>
+        <article class="project-card" data-aos="fade-up" role="listitem">
+          <img src="assets/project3.jpg" alt="UI/UX Aplikasi Mobile" />
+          <h3>UI/UX Aplikasi Mobile</h3>
+          <p>Studi desain UI/UX untuk aplikasi mobile modern dengan fokus pada pengalaman pengguna yang intuitif.</p>
+          <a href="project3.html" class="btn-project" aria-label="Lihat detail project UI UX Aplikasi Mobile">Lihat Detail</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="testimonials" tabindex="-1" data-aos="fade-up" aria-labelledby="testimonials-title">
+      <h2 id="testimonials-title">Testimonials</h2>
+      <blockquote class="testimonial">
+        <p>"Davanico adalah seorang profesional yang sangat berbakat. Karyanya selalu memukau dan memenuhi harapan!" - <cite>Client A</cite></p>
+      </blockquote>
+      <blockquote class="testimonial">
+        <p>"Sangat menyenangkan bekerja sama dengan Davanico. Dia selalu memberikan ide-ide segar dan inovatif." - <cite>Client B</cite></p>
+      </blockquote>
+    </section>
+
+    <section id="additional-projects" tabindex="-1" data-aos="fade-up" aria-labelledby="additional-projects-title">
+      <h2 id="additional-projects-title">Additional Projects</h2>
+      <div class="additional-projects-grid" role="list">
+        <article class="additional-project-card" data-aos="fade-up" role="listitem">
+          <img src="assets/project4.jpg" alt="Project 4" />
+          <h3>Project 4</h3>
+          <p>Deskripsi singkat tentang proyek 4 yang menunjukkan kemampuan dan kreativitas Anda.</p>
+          <a href="project4.html" class="btn-project" aria-label="Lihat detail project 4">Lihat Detail</a>
+        </article>
+        <article class="additional-project-card" data-aos="fade-up" role="listitem">
+          <img src="assets/project5.jpg" alt="Project 5" />
+          <h3>Project 5</h3>
+          <p>Deskripsi singkat tentang proyek 5 yang menunjukkan kemampuan dan kreativitas Anda.</p>
+          <a href="project5.html" class="btn-project" aria-label="Lihat detail project 5">Lihat Detail</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" tabindex="-1" data-aos="fade-up" aria-labelledby="contact-title">
+      <h2 id="contact-title">Kontak</h2>
+      <p>Tertarik untuk berkolaborasi atau sekadar menyapa? Jangan ragu untuk menghubungi saya melalui:</p>
+      <div class="contact-info">
+        <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:davanico.ady@example.com">davanico.ady@example.com</a></p>
+        <p><i class="fab fa-linkedin" aria-hidden="true"></i> <a href="https://www.linkedin.com/in/davanico" target="_blank" rel="noopener noreferrer">Davanico Ady Nugroho</a></p>
+        <p><i class="fab fa-github" aria-hidden="true"></i> <a href="https://github.com/davanico" target="_blank" rel="noopener noreferrer">davanico</a></p>
+      </div>
+    </section>
   </main>
 
   <footer role="contentinfo">
@@ -251,13 +327,12 @@
     menuToggle.addEventListener('click', () => {
       const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
       menuToggle.setAttribute('aria-expanded', !expanded);
-      if(sidebarMenu.hasAttribute('hidden')){
+      sidebarMenu.classList.toggle('open');
+      if (sidebarMenu.classList.contains('open')) {
         sidebarMenu.removeAttribute('hidden');
-        sidebarMenu.classList.add('open');
         sidebarMenu.focus();
       } else {
         sidebarMenu.setAttribute('hidden', '');
-        sidebarMenu.classList.remove('open');
       }
     });
 
@@ -308,4 +383,3 @@
   </script>
 </body>
 </html>
-  
