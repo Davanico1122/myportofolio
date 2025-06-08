@@ -1,316 +1,133 @@
 <!DOCTYPE html>
-<html lang="id" data-theme="dark">
+<html lang="id" data-theme="light">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Davanico Ady Nugroho - Portofolio</title>
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-<!-- AOS Animation -->
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-<style>
-  /* Reset & base */
-  * {
-    box-sizing: border-box;
-  }
-  body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #0d0d0d;
-    color: #fff;
-    line-height: 1.6;
-    scroll-behavior: smooth;
-  }
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-
-  /* Navbar */
-  .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(26,26,26,0.85);
-    backdrop-filter: saturate(180%) blur(12px);
-    border-bottom: 1px solid rgba(255 255 255 / 0.1);
-    z-index: 1000;
-  }
-  .navbar .container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 0 1.25rem;
-    display: flex;
-    align-items: center;
-    height: 56px;
-    justify-content: space-between;
-  }
-  .logo {
-    font-weight: 700;
-    font-size: 1.3rem;
-    color: #8b5cf6;
-  }
-  /* Nav links */
-  .nav-links {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 1.5rem;
-    margin: 0;
-  }
-  .nav-links li {
-    position: relative;
-  }
-  .nav-links a {
-    color: #fff;
-    font-weight: 600;
-    padding: 0.5rem 0;
-    transition: color 0.3s ease;
-    display: block;
-  }
-  .nav-links a:hover,
-  .nav-links a:focus {
-    color: #ec4899;
-  }
-
-  /* Hamburger menu */
-  .menu-toggle {
-    display: none;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 28px;
-    height: 24px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    z-index: 1100;
-  }
-  .menu-toggle:focus {
-    outline: 2px solid #8b5cf6;
-    outline-offset: 2px;
-  }
-  .menu-toggle span {
-    width: 100%;
-    height: 3px;
-    background: #fff;
-    border-radius: 2px;
-    transition: all 0.3s ease;
-    display: block;
-    transform-origin: 1px;
-  }
-  /* Cross icon on toggle */
-  .menu-toggle.open span:nth-child(1) {
-    transform: rotate(45deg);
-  }
-  .menu-toggle.open span:nth-child(2) {
-    opacity: 0;
-  }
-  .menu-toggle.open span:nth-child(3) {
-    transform: rotate(-45deg);
-  }
-
-  /* Responsive nav */
-  @media (max-width: 768px) {
-    .nav-links {
-      position: fixed;
-      top: 56px;
-      right: 0;
-      height: calc(100vh - 56px);
-      width: 220px;
-      background-color: rgba(26,26,26,0.95);
-      flex-direction: column;
-      gap: 0;
-      padding-top: 1.5rem;
-      transform: translateX(100%);
-      transition: transform 0.3s ease;
-      box-shadow: -4px 0 12px rgba(0,0,0,0.75);
-      border-left: 1px solid rgba(255 255 255 / 0.1);
-    }
-    .nav-links.open {
-      transform: translateX(0%);
-    }
-    .nav-links li {
-      width: 100%;
-    }
-    .nav-links a {
-      padding: 1rem 1.5rem;
-      font-size: 1.1rem;
-      border-bottom: 1px solid rgba(255 255 255 / 0.1);
-    }
-  }
-
-  /* Theme toggle button - adjusted */
-  #theme-toggle {
-    background: transparent;
-    border: 1px solid #fff;
-    border-radius: 4px;
-    color: #fff;
-    font-size: 1.1rem;
-    padding: 0.3rem 0.6rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  #theme-toggle:hover,
-  #theme-toggle:focus {
-    background-color: #8b5cf6;
-    border-color: #8b5cf6;
-    color: #fff;
-  }
-
-  /* Container for rest of page content */
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 5rem 0 6rem 0; /* top padding leaves space below fixed navbar */
-  }
-
-  h2 {
-    font-weight: 700;
-    color: #8b5cf6;
-    margin-bottom: 1.5rem;
-    font-size: 2.2rem;
-    text-align: center;
-  }
-  p {
-    color: #aaa;
-  }
-
-  /* Other sections same styling as previous, omitted here for brevity */
-
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Davanico Ady Nugroho - Portofolio</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- AOS Animation -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-<nav class="navbar" id="navbar" role="navigation" aria-label="Primary Navigation">
-  <div class="container">
-    <a href="#hero" class="logo">Davanico Ady Nugroho</a>
-    <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Menu Toggle" id="menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <ul class="nav-links" id="primary-navigation">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skill</a></li>
-      <li><a href="#projects">Project</a></li>
-      <li><a href="#testimonials">Testimoni</a></li>
-      <li><a href="#additional-projects">Additional</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><button id="theme-toggle" aria-label="Toggle Theme">🌓</button></li>
-    </ul>
-  </div>
-</nav>
-
-<div class="container" id="hero" data-aos="fade-up" tabindex="-1">
-  <header class="hero">
-    <h2>Halo, saya Davanico 👋</h2>
-    <p>Lagi belajar jadi web developer dan UI/UX designer, pengen bikin solusi digital yang kekinian dan ringan.</p>
-    <img src="assets/profile.JPG" alt="Foto Profil Davanico" class="profile-pic" />
-  </header>
-
-  <section id="about" tabindex="-1" data-aos="fade-up">
-    <h2>About Me</h2>
-    <p>Saya punya ketertarikan besar pada dunia pengembangan web. Saya suka sekali merancang dan membangun website yang terlihat modern, terasa interaktif saat digunakan, dan tentu saja memiliki estetika yang menarik. Bagi saya, kepuasan pengguna adalah yang terpenting, dan saya selalu berusaha memberikan pengalaman terbaik melalui karya-karya saya.</p>
-  </section>
-
-  <section id="skills" tabindex="-1" data-aos="fade-up">
-    <h2>Skill</h2>
-    <ul>
-      <li>HTML5</li>
-      <li>CSS3</li>
-      <li>JavaScript</li>
-      <li>Figma / UI Design</li>
-      <li>GitHub</li>
-      <li>Corel Draw</li>
-    </ul>
-  </section>
-
-  <section id="projects" tabindex="-1" data-aos="fade-up">
-    <h2>Project</h2>
-    <div class="projects-grid">
-      <div class="project-card" data-aos="fade-up">
-        <img src="assets/project1.jpg" alt="Design Poster" />
-        <h3>DESIGN POSTER</h3>
-        <p>Selamat datang di design poster saya ini, tempat di mana ide-ide bertemu visual! Setiap poster dibuat untuk tidak hanya enak dipandang, tapi juga mampu menyampaikan pesan secara efektif dan menarik.</p>
-        <a href="project1.html" class="btn-project">Lihat Detail</a>
-      </div>
-      <div class="project-card" data-aos="fade-up">
-        <img src="assets/project2.jpg" alt="Portofolio Pribadi" />
-        <h3>Portofolio Pribadi</h3>
-        <p>Template portofolio pribadi modern dan interaktif, dirancang untuk menampilkan karya secara profesional.</p>
-        <a href="project2.html" class="btn-project">Lihat Detail</a>
-      </div>
-      <div class="project-card" data-aos="fade-up">
-        <img src="assets/project3.jpg" alt="UI/UX Aplikasi Mobile" />
-        <h3>UI/UX Aplikasi Mobile</h3>
-        <p>Studi desain UI/UX untuk aplikasi mobile modern dengan fokus pada pengalaman pengguna yang intuitif.</p>
-        <a href="project3.html" class="btn-project">Lihat Detail</a>
-      </div>
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Primary Navigation">
+    <div class="container">
+      <a href="#hero" class="logo">Davanico Ady Nugroho</a>
+      <button class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle Menu" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="primary-navigation">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skill</a></li>
+        <li><a href="#projects">Project</a></li>
+        <li><a href="#testimonials">Testimoni</a></li>
+        <li><a href="#additional-projects">Additional</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="theme-toggle" aria-label="Toggle Theme">🌓</button></li>
+      </ul>
     </div>
-  </section>
+  </nav>
 
-  <section id="testimonials" tabindex="-1" data-aos="fade-up">
-    <h2>Testimonials</h2>
-    <div class="testimonial">
-      <p>"Davanico adalah seorang profesional yang sangat berbakat. Karyanya selalu memukau dan memenuhi harapan!" - <strong>Client A</strong></p>
-    </div>
-    <div class="testimonial">
-      <p>"Sangat menyenangkan bekerja sama dengan Davanico. Dia selalu memberikan ide-ide segar dan inovatif." - <strong>Client B</strong></p>
-    </div>
-  </section>
+  <main class="container" id="hero" tabindex="-1" role="main">
+    <header class="hero" data-aos="fade-up" aria-label="Introduction">
+      <h1>Halo, saya Davanico 👋</h1>
+      <p>Lagi belajar jadi web developer dan UI/UX designer, pengen bikin solusi digital yang kekinian dan ringan.</p>
+      <img src="assets/profile.JPG" alt="Foto Profil Davanico" class="profile-pic" />
+      <a href="#projects" class="btn-project" aria-label="Lihat project saya">Lihat Project Saya</a>
+    </header>
 
-  <section id="additional-projects" tabindex="-1" data-aos="fade-up">
-    <h2>Additional Projects</h2>
-    <div class="additional-projects-grid">
-      <div class="additional-project-card" data-aos="fade-up">
-        <img src="assets/project4.jpg" alt="Project 4" />
-        <h3>Project 4</h3>
-        <p>Deskripsi singkat tentang proyek 4 yang menunjukkan kemampuan dan kreativitas Anda.</p>
-        <a href="project4.html" class="btn-project">Lihat Detail</a>
+    <section id="about" tabindex="-1" data-aos="fade-up" aria-labelledby="about-title">
+      <h2 id="about-title">About Me</h2>
+      <p>Saya punya ketertarikan besar pada dunia pengembangan web. Saya suka sekali merancang dan membangun website yang terlihat modern, terasa interaktif saat digunakan, dan tentu saja memiliki estetika yang menarik. Bagi saya, kepuasan pengguna adalah yang terpenting, dan saya selalu berusaha memberikan pengalaman terbaik melalui karya-karya saya.</p>
+    </section>
+
+    <section id="skills" tabindex="-1" data-aos="fade-up" aria-labelledby="skills-title">
+      <h2 id="skills-title">Skill</h2>
+      <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript</li>
+        <li>Figma / UI Design</li>
+        <li>GitHub</li>
+        <li>Corel Draw</li>
+      </ul>
+    </section>
+
+    <section id="projects" tabindex="-1" data-aos="fade-up" aria-labelledby="projects-title">
+      <h2 id="projects-title">Project</h2>
+      <div class="projects-grid" role="list">
+        <article class="project-card" data-aos="fade-up" role="listitem">
+          <img src="assets/project1.jpg" alt="Design Poster" />
+          <h3>DESIGN POSTER</h3>
+          <p>Selamat datang di design poster saya ini, tempat di mana ide-ide bertemu visual! Setiap poster dibuat untuk tidak hanya enak dipandang, tapi juga mampu menyampaikan pesan secara efektif dan menarik.</p>
+          <a href="project1.html" class="btn-project" aria-label="Lihat detail project Design Poster">Lihat Detail</a>
+        </article>
+        <article class="project-card" data-aos="fade-up" role="listitem">
+          <img src="assets/project2.jpg" alt="Portofolio Pribadi" />
+          <h3>Portofolio Pribadi</h3>
+          <p>Template portofolio pribadi modern dan interaktif, dirancang untuk menampilkan karya secara profesional.</p>
+          <a href="project2.html" class="btn-project" aria-label="Lihat detail project Portofolio Pribadi">Lihat Detail</a>
+        </article>
+        <article class="project-card" data-aos="fade-up" role="listitem">
+          <img src="assets/project3.jpg" alt="UI/UX Aplikasi Mobile" />
+          <h3>UI/UX Aplikasi Mobile</h3>
+          <p>Studi desain UI/UX untuk aplikasi mobile modern dengan fokus pada pengalaman pengguna yang intuitif.</p>
+          <a href="project3.html" class="btn-project" aria-label="Lihat detail project UI UX Aplikasi Mobile">Lihat Detail</a>
+        </article>
       </div>
-      <div class="additional-project-card" data-aos="fade-up">
-        <img src="assets/project5.jpg" alt="Project 5" />
-        <h3>Project 5</h3>
-        <p>Deskripsi singkat tentang proyek 5 yang menunjukkan kemampuan dan kreativitas Anda.</p>
-        <a href="project5.html" class="btn-project">Lihat Detail</a>
+    </section>
+
+    <section id="testimonials" tabindex="-1" data-aos="fade-up" aria-labelledby="testimonials-title">
+      <h2 id="testimonials-title">Testimonials</h2>
+      <blockquote class="testimonial">
+        <p>"Davanico adalah seorang profesional yang sangat berbakat. Karyanya selalu memukau dan memenuhi harapan!" - <cite>Client A</cite></p>
+      </blockquote>
+      <blockquote class="testimonial">
+        <p>"Sangat menyenangkan bekerja sama dengan Davanico. Dia selalu memberikan ide-ide segar dan inovatif." - <cite>Client B</cite></p>
+      </blockquote>
+    </section>
+
+    <section id="additional-projects" tabindex="-1" data-aos="fade-up" aria-labelledby="additional-projects-title">
+      <h2 id="additional-projects-title">Additional Projects</h2>
+      <div class="additional-projects-grid" role="list">
+        <article class="additional-project-card" data-aos="fade-up" role="listitem">
+          <img src="assets/project4.jpg" alt="Project 4" />
+          <h3>Project 4</h3>
+          <p>Deskripsi singkat tentang proyek 4 yang menunjukkan kemampuan dan kreativitas Anda.</p>
+          <a href="project4.html" class="btn-project" aria-label="Lihat detail project 4">Lihat Detail</a>
+        </article>
+        <article class="additional-project-card" data-aos="fade-up" role="listitem">
+          <img src="assets/project5.jpg" alt="Project 5" />
+          <h3>Project 5</h3>
+          <p>Deskripsi singkat tentang proyek 5 yang menunjukkan kemampuan dan kreativitas Anda.</p>
+          <a href="project5.html" class="btn-project" aria-label="Lihat detail project 5">Lihat Detail</a>
+        </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact" tabindex="-1" data-aos="fade-up">
-    <h2>Kontak</h2>
-    <p>Tertarik untuk berkolaborasi atau sekadar menyapa? Jangan ragu untuk menghubungi saya melalui:</p>
-    <div class="contact-info">
-      <p><i class="fas fa-envelope"></i> Email: <a href="mailto:davanico.ady@example.com">davanico.ady@example.com</a></p>
-      <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/davanico" target="_blank" rel="noopener noreferrer">Davanico Ady Nugroho</a></p>
-      <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/davanico" target="_blank" rel="noopener noreferrer">davanico</a></p>
-    </div>
-  </section>
+    <section id="contact" tabindex="-1" data-aos="fade-up" aria-labelledby="contact-title">
+      <h2 id="contact-title">Kontak</h2>
+      <p>Tertarik untuk berkolaborasi atau sekadar menyapa? Jangan ragu untuk menghubungi saya melalui:</p>
+      <div class="contact-info">
+        <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:davanico.ady@example.com">davanico.ady@example.com</a></p>
+        <p><i class="fab fa-linkedin" aria-hidden="true"></i> <a href="https://www.linkedin.com/in/davanico" target="_blank" rel="noopener noreferrer">Davanico Ady Nugroho</a></p>
+        <p><i class="fab fa-github" aria-hidden="true"></i> <a href="https://github.com/davanico" target="_blank" rel="noopener noreferrer">davanico</a></p>
+      </div>
+    </section>
+  </main>
 
-</div>
+  <footer role="contentinfo">
+    <p>&copy; 2025 Davanico Ady Nugroho. All rights reserved.</p>
+  </footer>
 
-<footer>
-  <p>&copy; 2025 Davanico Ady Nugroho. All rights reserved.</p>
-</footer>
-
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({ duration: 1000, once: true });
-
-  // Menu toggle handler
-  const menuToggle = document.getElementById('menu-toggle');
-  const navLinks = document.getElementById('primary-navigation');
-
-  menuToggle.addEventListener('click', () => {
-    const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
-    menuToggle.setAttribute('aria-expanded', !expanded);
-    menuToggle.classList.toggle('open');
-    navLinks.classList.toggle('open');
-  });
-</script>
+  <script src="js/script.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+  </script>
 </body>
 </html>
 
