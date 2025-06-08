@@ -36,7 +36,7 @@ body {
   color: var(--text-color);
   line-height: 1.6;
   scroll-behavior: smooth;
-  padding-top: 70px; /* for sticky navbar */
+  padding-top: 80px; /* for sticky navbar */
 }
 
 .container {
@@ -55,22 +55,21 @@ body {
   top: 0;
   left: 0;
   background: var(--bg-color);
-  padding: 0.75rem 0;
   z-index: 9999;
-  transition: top 0.3s;
   border-bottom: 1px solid var(--border-color);
   box-shadow: 0 4px 16px rgba(0,0,0,0.07);
 }
 
-.navbar .container {
+.navbar-container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-left: 32px;
-  padding-right: 32px;
-  width: 100%;
+  padding-left: 64px; /* JARAK KIRI & KANAN NAVBAR */
+  padding-right: 64px;
+  height: 72px;
   box-sizing: border-box;
 }
 
@@ -345,15 +344,15 @@ footer {
 
 /* === Responsiveness === */
 @media (max-width: 1200px) {
-  .container,
-  .navbar .container {
-    padding-left: 16px;
-    padding-right: 16px;
+  .navbar-container,
+  .container {
+    padding-left: 24px;
+    padding-right: 24px;
   }
 }
 @media (max-width: 900px) {
-  .container,
-  .navbar .container {
+  .navbar-container,
+  .container {
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -366,11 +365,12 @@ footer {
 }
 @media (max-width: 700px) {
   body { padding-top: 60px; }
-  .navbar .container {
+  .navbar-container {
     flex-direction: column;
     align-items: flex-start;
     padding-left: 5px;
     padding-right: 5px;
+    height: auto;
   }
   .nav-links {
     gap: 1rem;
@@ -387,8 +387,8 @@ footer {
 }
 
 @media (max-width: 480px) {
-  .container,
-  .navbar .container {
+  .navbar-container,
+  .container {
     padding-left: 2px;
     padding-right: 2px;
   }
