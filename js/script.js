@@ -1,11 +1,10 @@
-// js/script.js
-
 document.addEventListener('DOMContentLoaded', () => {
     // --- Theme Toggle ---
     const themeToggle = document.getElementById('theme-toggle');
+    const sidebarThemeToggle = document.getElementById('sidebar-theme-toggle');
     const htmlElement = document.documentElement; // Mengambil elemen <html>
 
-    if (themeToggle) { // Pastikan tombol toggle ada di HTML
+    if (themeToggle || sidebarThemeToggle) { // Pastikan tombol toggle ada di HTML
         // Cek preferensi tema dari local storage saat halaman dimuat
         const savedTheme = localStorage.getItem('theme');
 
@@ -23,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Tambahkan event listener untuk tombol toggle
-        themeToggle.addEventListener('click', () => {
+        const toggleTheme = () => {
             let currentTheme = htmlElement.getAttribute('data-theme');
             if (currentTheme === 'dark') {
                 htmlElement.setAttribute('data-theme', 'light');
@@ -32,12 +31,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 htmlElement.setAttribute('data-theme', 'dark');
                 localStorage.setItem('theme', 'dark'); // Simpan preferensi ke local storage
             }
-        });
+        };
+
+        themeToggle.addEventListener('click', toggleTheme);
+        sidebarThemeToggle.addEventListener('click', toggleTheme);
     }
 
     // --- Navbar Hide/Show on Scroll ---
     let lastScrollY = window.scrollY;
-    const navbar = document.getElementById('navbar');
+    const navbar = document.querySelector('.navbar');
 
     if (navbar) { // Pastikan navbar ada di HTML
         window.addEventListener('scroll', () => {
@@ -76,14 +78,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Menu Toggle ---
     const menuToggle = document.getElementById('menu-toggle');
-    const navLinks = document.getElementById('primary-navigation');
+    const sidebarMenu = document.getElementById('sidebar-menu');
 
     if (menuToggle) { // Pastikan tombol toggle ada di HTML
         menuToggle.addEventListener('click', () => {
             const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
             menuToggle.setAttribute('aria-expanded', !expanded);
-            menuToggle.classList.toggle('open');
-            navLinks.classList.toggle('open');
+            sidebarMenu.classList.toggle('open');
+            if (sidebarMenu.classList.contains('open')) {
+                sidebarMenu.removeAttribute('hidden');
+                sidebarMenu.focus();
+            } else {
+                sidebarMenu.setAttribute('hidden', '');
+            }
         });
     }
 });
