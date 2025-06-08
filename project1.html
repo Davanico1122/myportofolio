@@ -1,97 +1,117 @@
 <!DOCTYPE html>
 <html lang="id" data-theme="light">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Detail Proyek 1 - Davanico Ady Nugroho</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" />
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Detail Proyek 1 - Davanico Ady Nugroho</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="assets/js/script.js"></script>
+
 </head>
 <body>
-  <header>
-    <nav class="navbar" role="navigation" aria-label="Primary Navigation">
-      <a href="index.html" class="logo">Davanico Ady Nugroho</a>
-      <button class="menu-toggle" aria-label="Toggle menu" aria-controls="sidebar-menu" aria-expanded="false" id="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <ul class="nav-links desktop-nav" role="menubar" aria-label="Primary navigation links">
-        <li><a href="index.html#about" role="menuitem">About</a></li>
-        <li><a href="index.html#skills" role="menuitem">Skill</a></li>
-        <li><a href="index.html#projects" role="menuitem">Project</a></li>
-        <li><a href="index.html#testimonials" role="menuitem">Testimoni</a></li>
-        <li><a href="index.html#additional-projects" role="menuitem">Additional</a></li>
-        <li><a href="index.html#contact" role="menuitem">Contact</a></li>
-        <li><button id="theme-toggle" aria-label="Toggle theme">🌓</button></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+        <nav class="navbar" role="navigation" aria-label="Primary Navigation">
+            <a href="index.html" class="logo">Davanico Ady Nugroho</a>
+            <button class="menu-toggle" aria-label="Toggle menu" aria-controls="sidebar-menu" aria-expanded="false" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links desktop-nav" role="menubar" aria-label="Primary navigation links">
+                <li><a href="index.html#about" role="menuitem">About</a></li>
+                <li><a href="index.html#skills" role="menuitem">Skill</a></li>
+                <li><a href="index.html#projects" role="menuitem">Project</a></li>
+                <li><a href="index.html#testimonials" role="menuitem">Testimoni</a></li>
+                <li><a href="index.html#additional-projects" role="menuitem">Additional</a></li>
+                <li><a href="index.html#contact" role="menuitem">Contact</a></li>
+                <li><button id="theme-toggle" aria-label="Toggle theme">🌓</button></li>
+            </ul>
+        </nav>
+        <aside class="sidebar-menu" id="sidebar">
+            <button class="close-sidebar" aria-label="Close menu" id="close-sidebar">&times;</button>
+            <ul role="menu">
+                <li><a href="index.html#about" role="menuitem" class="sidebar-link">About</a></li>
+                <li><a href="index.html#skills" role="menuitem" class="sidebar-link">Skill</a></li>
+                <li><a href="index.html#projects" role="menuitem" class="sidebar-link">Project</a></li>
+                <li><a href="index.html#testimonials" role="menuitem" class="sidebar-link">Testimoni</a></li>
+                <li><a href="index.html#additional-projects" role="menuitem" class="sidebar-link">Additional</a></li>
+                <li><a href="index.html#contact" role="menuitem" class="sidebar-link">Contact</a></li>
+                <li><button id="sidebar-theme-toggle" class="sidebar-link" aria-label="Toggle theme">🌓</button></li>
+            </ul>
+        </aside>
+    </header>
 
-  <main class="container" role="main">
-    <a href="index.html#projects" class="back-to-portfolio" aria-label="Kembali ke Portofolio" data-aos="fade-right">
-      <i class="fas fa-arrow-left"></i> Kembali ke Portofolio
-    </a>
+    <main class="container" role="main">
+        <a href="index.html#projects" class="back-to-portfolio" aria-label="Kembali ke Portofolio" data-aos="fade-right">
+            <i class="fas fa-arrow-left"></i> Kembali ke Portofolio
+        </a>
 
-    <section class="project-hero" data-aos="fade-up" aria-label="Judul dan deskripsi proyek">
-      <h1 class="project-title">DESAIN POSTER</h1>
-      <p>Berbagai contoh desain poster yang menarik dan efektif menyampaikan pesan melalui visual yang kuat.</p>
-    </section>
+        <section class="project-hero" data-aos="fade-up" aria-label="Judul dan deskripsi proyek">
+            <h1 class="project-title">DESAIN POSTER</h1>
+            <p>Berbagai contoh desain poster yang menarik dan efektif menyampaikan pesan melalui visual yang kuat.</p>
+        </section>
 
-    <section class="poster-gallery-section" data-aos="fade-up" aria-label="Galeri gambar proyek">
-      <div class="poster-gallery">
-        <div class="poster-item" data-aos="fade-up" data-aos-delay="0">
-          <img src="assets/project1_1.jpg" alt="Desain poster 1" />
-          <p class="poster-caption">Poster Welcome Seoul</p>
-        </div>
-        <div class="poster-item" data-aos="fade-up" data-aos-delay="100">
-          <img src="assets/project1_2.jpg" alt="Desain poster 2" />
-          <p class="poster-caption">Desain website e-commerce</p>
-        </div>
-        <div class="poster-item" data-aos="fade-up" data-aos-delay="200">
-          <img src="assets/project1_3.jpg" alt="Desain poster 3" />
-          <p class="poster-caption">Prototipe interaktif</p>
-        </div>
-        <div class="poster-item" data-aos="fade-up" data-aos-delay="300">
-          <img src="assets/project1_4.jpg" alt="Desain poster 4" />
-          <p class="poster-caption">Poster kampanye sosial</p>
-        </div>
-      </div>
-    </section>
+        <section class="poster-gallery-section" data-aos="fade-up" aria-label="Galeri gambar proyek">
+            <div class="poster-gallery">
+                <div class="poster-item" data-aos="fade-up" data-aos-delay="0">
+                    <img src="assets/project1_1.jpg" alt="Desain poster 1" />
+                    <p class="poster-caption">Poster Welcome Seoul</p>
+                </div>
+                <div class="poster-item" data-aos="fade-up" data-aos-delay="100">
+                    <img src="assets/project1_2.jpg" alt="Desain poster 2" />
+                    <p class="poster-caption">Desain website e-commerce</p>
+                </div>
+                <div class="poster-item" data-aos="fade-up" data-aos-delay="200">
+                    <img src="assets/project1_3.jpg" alt="Desain poster 3" />
+                    <p class="poster-caption">Prototipe interaktif</p>
+                </div>
+                <div class="poster-item" data-aos="fade-up" data-aos-delay="300">
+                    <img src="assets/project1_4.jpg" alt="Desain poster 4" />
+                    <p class="poster-caption">Poster kampanye sosial</p>
+                </div>
+            </div>
+        </section>
 
-    <section class="project-description" data-aos="fade-up" data-aos-delay="400">
-      <h2>Tentang Proyek ini</h2>
-      <p>Proyek "DESAIN POSTER" berfokus pada pembuatan visual yang estetis dan fungsional untuk berbagai keperluan, menggabungkan seni dan komunikasi yang efektif.</p>
+        <section class="project-description" data-aos="fade-up" data-aos-delay="400">
+            <h2>Tentang Proyek ini</h2>
+            <p>Proyek "DESAIN POSTER" berfokus pada pembuatan visual yang estetis dan fungsional untuk berbagai keperluan, menggabungkan seni dan komunikasi yang efektif.</p>
 
-      <h3>Jenis Poster</h3>
-      <ul>
-        <li>Poster Karya Seni</li>
-        <li>Poster Edukasi</li>
-        <li>Poster Kampanye</li>
-        <li>Poster Promosi</li>
-      </ul>
+            <h3>Jenis Poster</h3>
+            <ul>
+                <li>Poster Karya Seni</li>
+                <li>Poster Edukasi</li>
+                <li>Poster Kampanye</li>
+                <li>Poster Promosi</li>
+            </ul>
 
-      <h3>Alat dan Teknologi</h3>
-      <ul class="skills">
-        <li>Adobe Photoshop</li>
-        <li>Adobe Illustrator</li>
-        <li>Canva</li>
-      </ul>
+            <h3>Alat dan Teknologi</h3>
+            <ul class="skills">
+                <li>Adobe Photoshop</li>
+                <li>Adobe Illustrator</li>
+                <li>Canva</li>
+            </ul>
 
-      <div class="project-links">
-        <a href="#" class="btn-project">Lihat Demo Live</a>
-        <a href="https://github.com/Davanico1122" class="btn-project secondary" target="_blank" rel="noopener noreferrer">Lihat di GitHub</a>
-      </div>
-    </section>
-  </main>
+            <div class="project-links">
+                <a href="#" class="btn-project">Lihat Demo Live</a>
+                <a href="https://github.com/Davanico1122" class="btn-project secondary" target="_blank" rel="noopener noreferrer">Lihat di GitHub</a>
+            </div>
+        </section>
+    </main>
 
-  <footer role="contentinfo" data-aos="fade-up">
-    <p>&copy; 2025 Davanico Ady Nugroho</p>
-  </footer>
+    <footer role="contentinfo" data-aos="fade-up">
+        <p>&copy; 2025 Davanico Ady Nugroho</p>
+    </footer>
 
-  <script src="js/script.js"></script>
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>AOS.init({ duration: 1000, once: true });</script>
-</body>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        // AOS.init harus dipanggil setelah AOS.js dimuat
+        AOS.init({ duration: 1000, once: true });
+    </script>
+    </body>
 </html>
