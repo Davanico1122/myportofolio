@@ -1,117 +1,120 @@
 <!DOCTYPE html>
 <html lang="id" data-theme="light">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detail Proyek 1 - Davanico Ady Nugroho</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/css/style.css"> </head>
+<body class="project-detail-page"> <nav class="navbar" role="navigation" aria-label="Primary Navigation">
+        <a href="index.html" class="logo">Davanico Ady Nugroho</a>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" />
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+        <button class="menu-toggle" id="menu-toggle" aria-controls="sidebar" aria-expanded="false" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
+        <ul class="nav-links">
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#skills">Skill</a></li>
+            <li><a href="index.html#projects">Project</a></li>
+            <li><a href="index.html#testimonials">Testimoni</a></li>
+            <li><a href="index.html#additional-projects">Additional</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li>
+                <button id="theme-toggle" aria-label="Toggle dark/light theme">
+                    <i class="fas fa-moon"></i> </button>
+            </li>
+        </ul>
+    </nav>
 
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <script src="assets/js/script.js"></script>
-
-</head>
-<body>
-    <header>
-        <nav class="navbar" role="navigation" aria-label="Primary Navigation">
-            <a href="index.html" class="logo">Davanico Ady Nugroho</a>
-            <button class="menu-toggle" aria-label="Toggle menu" aria-controls="sidebar-menu" aria-expanded="false" id="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-links desktop-nav" role="menubar" aria-label="Primary navigation links">
-                <li><a href="index.html#about" role="menuitem">About</a></li>
-                <li><a href="index.html#skills" role="menuitem">Skill</a></li>
-                <li><a href="index.html#projects" role="menuitem">Project</a></li>
-                <li><a href="index.html#testimonials" role="menuitem">Testimoni</a></li>
-                <li><a href="index.html#additional-projects" role="menuitem">Additional</a></li>
-                <li><a href="index.html#contact" role="menuitem">Contact</a></li>
-                <li><button id="theme-toggle" aria-label="Toggle theme">🌓</button></li>
-            </ul>
+    <aside class="sidebar-menu" id="sidebar" hidden tabindex="-1">
+        <button class="close-sidebar" id="close-sidebar" aria-label="Close sidebar menu">&times;</button>
+        <nav>
+            <a href="index.html#about" class="sidebar-link">About</a>
+            <a href="index.html#skills" class="sidebar-link">Skill</a>
+            <a href="index.html#projects" class="sidebar-link">Project</a>
+            <a href="index.html#testimonials" class="sidebar-link">Testimoni</a>
+            <a href="index.html#additional-projects" class="sidebar-link">Additional</a>
+            <a href="index.html#contact" class="sidebar-link">Contact</a>
+            <button id="sidebar-theme-toggle" class="sidebar-link" aria-label="Toggle dark/light theme">
+                <i class="fas fa-moon"></i> </button>
         </nav>
-        <aside class="sidebar-menu" id="sidebar">
-            <button class="close-sidebar" aria-label="Close menu" id="close-sidebar">&times;</button>
-            <ul role="menu">
-                <li><a href="index.html#about" role="menuitem" class="sidebar-link">About</a></li>
-                <li><a href="index.html#skills" role="menuitem" class="sidebar-link">Skill</a></li>
-                <li><a href="index.html#projects" role="menuitem" class="sidebar-link">Project</a></li>
-                <li><a href="index.html#testimonials" role="menuitem" class="sidebar-link">Testimoni</a></li>
-                <li><a href="index.html#additional-projects" role="menuitem" class="sidebar-link">Additional</a></li>
-                <li><a href="index.html#contact" role="menuitem" class="sidebar-link">Contact</a></li>
-                <li><button id="sidebar-theme-toggle" class="sidebar-link" aria-label="Toggle theme">🌓</button></li>
-            </ul>
-        </aside>
-    </header>
+    </aside>
 
-    <main class="container" role="main">
-        <a href="index.html#projects" class="back-to-portfolio" aria-label="Kembali ke Portofolio" data-aos="fade-right">
-            <i class="fas fa-arrow-left"></i> Kembali ke Portofolio
-        </a>
+    <main class="container">
+        <a href="index.html#projects" class="back-to-portfolio"><i class="fas fa-arrow-left"></i> Kembali ke Portofolio</a>
 
-        <section class="project-hero" data-aos="fade-up" aria-label="Judul dan deskripsi proyek">
-            <h1 class="project-title">DESAIN POSTER</h1>
+        <header class="project-hero">
+            <h1>DESAIN POSTER</h1>
             <p>Berbagai contoh desain poster yang menarik dan efektif menyampaikan pesan melalui visual yang kuat.</p>
-        </section>
+        </header>
 
-        <section class="poster-gallery-section" data-aos="fade-up" aria-label="Galeri gambar proyek">
+        <section class="poster-gallery-section" role="region" aria-labelledby="poster-gallery-title">
+            <h2 id="poster-gallery-title">Galeri Poster</h2>
             <div class="poster-gallery">
-                <div class="poster-item" data-aos="fade-up" data-aos-delay="0">
-                    <img src="assets/project1_1.jpg" alt="Desain poster 1" />
+                <div class="poster-item">
+                    <img src="assets/project_detail_1.jpg" alt="Poster Welcome Seoul">
                     <p class="poster-caption">Poster Welcome Seoul</p>
                 </div>
-                <div class="poster-item" data-aos="fade-up" data-aos-delay="100">
-                    <img src="assets/project1_2.jpg" alt="Desain poster 2" />
+                <div class="poster-item">
+                    <img src="assets/project_detail_2.jpg" alt="Poster website e-commerce">
                     <p class="poster-caption">Desain website e-commerce</p>
                 </div>
-                <div class="poster-item" data-aos="fade-up" data-aos-delay="200">
-                    <img src="assets/project1_3.jpg" alt="Desain poster 3" />
+                <div class="poster-item">
+                    <img src="assets/project_detail_3.jpg" alt="Poster desain 3">
+                    <p class="poster-caption">Desain poster 3</p>
+                </div>
+                <div class="poster-item">
+                    <img src="assets/project_detail_4.jpg" alt="Poster prototipe interaktif">
                     <p class="poster-caption">Prototipe interaktif</p>
                 </div>
-                <div class="poster-item" data-aos="fade-up" data-aos-delay="300">
-                    <img src="assets/project1_4.jpg" alt="Desain poster 4" />
+                <div class="poster-item">
+                    <img src="assets/project_detail_5.jpg" alt="Poster desain 4">
+                    <p class="poster-caption">Desain poster 4</p>
+                </div>
+                <div class="poster-item">
+                    <img src="assets/ui_ux_app_1.jpg" alt="Poster kampanye sosial">
                     <p class="poster-caption">Poster kampanye sosial</p>
                 </div>
-            </div>
+                </div>
         </section>
 
-        <section class="project-description" data-aos="fade-up" data-aos-delay="400">
-            <h2>Tentang Proyek ini</h2>
+        <section class="project-description" role="region" aria-labelledby="project-desc-title">
+            <h3 id="project-desc-title">Tentang Proyek ini</h3>
             <p>Proyek "DESAIN POSTER" berfokus pada pembuatan visual yang estetis dan fungsional untuk berbagai keperluan, menggabungkan seni dan komunikasi yang efektif.</p>
 
-            <h3>Jenis Poster</h3>
+            <h4>Jenis Poster</h4>
             <ul>
                 <li>Poster Karya Seni</li>
-                <li>Poster Edukasi</li>
-                <li>Poster Kampanye</li>
-                <li>Poster Promosi</li>
+                <li>Poster Promosi Acara</li>
+                <li>Poster Kampanye Sosial</li>
+                <li>Poster Produk & Layanan</li>
             </ul>
 
-            <h3>Alat dan Teknologi</h3>
+            <h4>Proses Desain</h4>
+            <p>Saya memulai dengan riset mendalam tentang tema dan pesan yang ingin disampaikan. Kemudian, saya membuat beberapa sketsa awal dan melakukan iterasi desain. Setelah itu, saya fokus pada pemilihan tipografi, palet warna, dan elemen visual yang paling sesuai untuk menciptakan dampak maksimal.</p>
+
+            <h4>Tools yang Digunakan</h4>
             <ul class="skills">
+                <li>Corel Draw</li>
                 <li>Adobe Photoshop</li>
-                <li>Adobe Illustrator</li>
-                <li>Canva</li>
+                <li>Figma</li>
             </ul>
 
             <div class="project-links">
-                <a href="#" class="btn-project">Lihat Demo Live</a>
-                <a href="https://github.com/Davanico1122" class="btn-project secondary" target="_blank" rel="noopener noreferrer">Lihat di GitHub</a>
+                <a href="#" class="btn-project" target="_blank" rel="noopener noreferrer">Lihat Demo Live</a>
+                <a href="#" class="btn-project secondary" target="_blank" rel="noopener noreferrer">Lihat di GitHub</a>
             </div>
         </section>
     </main>
 
-    <footer role="contentinfo" data-aos="fade-up">
-        <p>&copy; 2025 Davanico Ady Nugroho</p>
+    <footer>
+        <p>&copy; 2023 Davanico Ady Nugroho. All rights reserved.</p>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        // AOS.init harus dipanggil setelah AOS.js dimuat
-        AOS.init({ duration: 1000, once: true });
-    </script>
-    </body>
+    <script src="assets/js/script.js"></script>
+</body>
 </html>
