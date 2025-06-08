@@ -73,4 +73,17 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // --- Menu Toggle ---
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('primary-navigation');
+
+    if (menuToggle) { // Pastikan tombol toggle ada di HTML
+        menuToggle.addEventListener('click', () => {
+            const expanded = menuToggle.getAttribute('aria-expanded') === 'true' || false;
+            menuToggle.setAttribute('aria-expanded', !expanded);
+            menuToggle.classList.toggle('open');
+            navLinks.classList.toggle('open');
+        });
+    }
 });
