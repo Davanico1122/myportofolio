@@ -36,15 +36,16 @@ body {
   color: var(--text-color);
   line-height: 1.6;
   scroll-behavior: smooth;
-  padding-top: 68px; /* untuk navbar sticky */
+  padding-top: 70px; /* for sticky navbar */
 }
 
-/* === Container === */
 .container {
-  width: 92%;
+  width: 100%;
   max-width: 1200px;
-  margin: auto;
-  padding: 60px 0;
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+  box-sizing: border-box;
 }
 
 /* === Navbar === */
@@ -65,7 +66,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 32px;
+  padding-right: 32px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .logo {
@@ -132,30 +138,6 @@ body {
   background: var(--secondary-color);
   color: #fff;
   border-color: var(--secondary-color);
-}
-
-/* Hamburger Menu (Mobile) */
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 34px;
-  height: 34px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  margin-left: 1rem;
-}
-
-.menu-toggle span {
-  display: block;
-  width: 100%;
-  height: 4px;
-  margin: 4px 0;
-  background-color: var(--primary-color);
-  border-radius: 2px;
-  transition: all 0.3s;
 }
 
 /* === Hero Section === */
@@ -361,191 +343,59 @@ footer {
   margin-top: 60px;
 }
 
-/* === Project Detail Page === */
-.project-detail-page {
-  padding-top: 7rem;
-  padding-bottom: 4rem;
-}
-
-.back-to-portfolio {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: var(--primary-color);
-  color: var(--button-text-color);
-  text-decoration: none;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  font-weight: 600;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  margin-bottom: 30px;
-}
-
-.back-to-portfolio i {
-  font-size: 1em;
-  margin-right: 8px;
-  color: inherit;
-}
-
-.back-to-portfolio:hover {
-  background-color: var(--secondary-color);
-  color: var(--button-text-color);
-  text-decoration: none;
-}
-
-.project-hero {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.project-title {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  color: var(--primary-color);
-}
-
-.project-hero p {
-  max-width: 800px;
-  margin: auto;
-  font-size: 1rem;
-  margin-bottom: 40px;
-}
-
-.poster-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 25px;
-  justify-content: center;
-  margin-bottom: 3rem;
-}
-
-.poster-item {
-  background-color: var(--card-bg);
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-}
-
-.poster-item:hover {
-  transform: translateY(-5px);
-}
-
-.poster-item img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  display: block;
-}
-
-.poster-caption {
-  padding: 15px;
-  font-size: 0.9em;
-  color: var(--secondary-text-color);
-  flex-grow: 1;
-}
-
-.project-description {
-  max-width: 800px;
-  margin: auto;
-  padding: 1rem;
-}
-
-.project-description h3 {
-  margin-top: 1.5rem;
-  color: var(--primary-color);
-}
-
-.project-description ul.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  list-style: none;
-  padding: 0;
-  margin: 0.5rem 0;
-  justify-content: center;
-}
-
-.project-description ul.skills li {
-  background-color: var(--card-bg);
-  padding: 0.4rem 0.8rem;
-  border-radius: 5px;
-  font-size: 0.85rem;
-}
-
-.project-links {
-  margin-top: 30px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-}
-
-.project-links .btn-project {
-  margin-top: 0;
-  padding: 0.8rem 1.5rem;
-  font-size: 1rem;
-}
-
 /* === Responsiveness === */
-@media (max-width: 1024px) {
-  .navbar .container { padding: 0 1rem; }
-  .nav-links { gap: 1.2rem; }
+@media (max-width: 1200px) {
+  .container,
+  .navbar .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
-
 @media (max-width: 900px) {
-  .navbar .container { padding: 0 0.5rem; }
-  .logo { margin-right: 1rem; }
-  .nav-links { gap: 1rem; }
+  .container,
+  .navbar .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .nav-links {
+    gap: 1.2rem;
+  }
+  .logo {
+    font-size: 1.2rem;
+  }
 }
-
-/* Mobile Navbar - Hamburger */
 @media (max-width: 700px) {
   body { padding-top: 60px; }
-  .navbar .container { padding: 0 0.5rem; }
-  .menu-toggle { display: flex; }
-  .nav-links {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background: var(--bg-color);
+  .navbar .container {
     flex-direction: column;
-    gap: 0.5rem;
-    width: 180px;
-    padding: 1.2rem 1.2rem 1.2rem 0.7rem;
-    border-radius: 0 0 12px 12px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-    display: none;
+    align-items: flex-start;
+    padding-left: 5px;
+    padding-right: 5px;
   }
-  .nav-links.open {
-    display: flex;
+  .nav-links {
+    gap: 1rem;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
   .hero h2 { font-size: 2rem; }
   .project-card h3 { font-size: 1.1rem; }
   .contact-info { font-size: 1em; }
   #skills li { padding: 6px 12px; font-size: 0.9em; }
   .profile-pic { width: 120px; height: 120px; margin-top: 20px; }
-  .poster-gallery { grid-template-columns: 1fr; gap: 20px; }
-  .poster-item img { height: 180px; }
+  .projects-grid { grid-template-columns: 1fr; }
 }
 
-/* Hamburger logic (needs JS to toggle .open on .nav-links) */
-@media (max-width: 700px) {
-  .nav-links { display: none; }
-  .nav-links.open { display: flex; }
-}
-
-/* Extra small screen */
 @media (max-width: 480px) {
-  .container { padding: 25px 0; }
+  .container,
+  .navbar .container {
+    padding-left: 2px;
+    padding-right: 2px;
+  }
   .hero h2 { font-size: 1.5rem; }
   #about p { font-size: 0.9em; }
   .btn-project { padding: 0.5rem 1rem; font-size: 0.9em; }
   #contact p { font-size: 1em; }
   .contact-info { font-size: 0.9em; }
-  .poster-item img { height: 120px; }
   .project-links { flex-direction: column; gap: 10px; }
 }
