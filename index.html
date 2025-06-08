@@ -1,158 +1,160 @@
 <!DOCTYPE html>
 <html lang="id" data-theme="light">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Davanico Ady Nugroho - Portofolio</title>
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- AOS Animation -->
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <!-- Main CSS -->
-  <link rel="stylesheet" href="css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Davanico Ady Nugroho - Portofolio</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+
+    <script src="assets/js/script.js"></script>
 </head>
 <body>
-  <header>
-    <nav class="navbar" role="navigation" aria-label="Primary Navigation">
-      <a href="#hero" class="logo">Davanico Ady Nugroho</a>
-      <button class="menu-toggle" aria-label="Toggle menu" aria-controls="sidebar-menu" aria-expanded="false" id="menu-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <ul class="nav-links desktop-nav" role="menubar" aria-label="Primary navigation links">
-        <li><a href="#about" role="menuitem">About</a></li>
-        <li><a href="#skills" role="menuitem">Skill</a></li>
-        <li><a href="#projects" role="menuitem">Project</a></li>
-        <li><a href="#testimonials" role="menuitem">Testimoni</a></li>
-        <li><a href="#additional-projects" role="menuitem">Additional</a></li>
-        <li><a href="#contact" role="menuitem">Contact</a></li>
-        <li><button id="theme-toggle" aria-label="Toggle theme">🌓</button></li>
-      </ul>
-    </nav>
-    <aside class="sidebar-menu" id="sidebar-menu" aria-label="Sidebar navigation menu" hidden tabindex="-1">
-      <button class="sidebar-close" aria-label="Close menu" id="sidebar-close">&times;</button>
-      <nav>
-        <a href="#about" class="sidebar-link">About</a>
-        <a href="#skills" class="sidebar-link">Skill</a>
-        <a href="#projects" class="sidebar-link">Project</a>
-        <a href="#testimonials" class="sidebar-link">Testimoni</a>
-        <a href="#additional-projects" class="sidebar-link">Additional</a>
-        <a href="#contact" class="sidebar-link">Contact</a>
-        <button id="sidebar-theme-toggle" aria-label="Toggle theme">🌓</button>
-      </nav>
-    </aside>
-  </header>
-
-  <main class="container" id="hero" tabindex="-1" role="main">
-    <header class="hero" data-aos="fade-up" aria-label="Introduction">
-      <h1>Halo, saya Davanico 👋</h1>
-      <p>Lagi belajar jadi web developer dan UI/UX designer, pengen bikin solusi digital yang kekinian dan ringan.</p>
-      <img src="assets/profile.JPG" alt="Foto Profil Davanico" class="profile-pic" />
+    <header>
+        <nav class="navbar" role="navigation" aria-label="Primary Navigation">
+            <a href="#hero" class="logo">Davanico Ady Nugroho</a>
+            <button class="menu-toggle" aria-label="Toggle menu" aria-controls="sidebar-menu" aria-expanded="false" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links desktop-nav" role="menubar" aria-label="Primary navigation links">
+                <li><a href="#about" role="menuitem">About</a></li>
+                <li><a href="#skills" role="menuitem">Skill</a></li>
+                <li><a href="#projects" role="menuitem">Project</a></li>
+                <li><a href="#testimonials" role="menuitem">Testimoni</a></li>
+                <li><a href="#additional-projects" role="menuitem">Additional</a></li>
+                <li><a href="#contact" role="menuitem">Contact</a></li>
+                <li><button id="theme-toggle" aria-label="Toggle theme">🌓</button></li>
+            </ul>
+        </nav>
+        <aside class="sidebar-menu" id="sidebar" aria-label="Sidebar navigation menu" hidden tabindex="-1">
+            <button class="close-sidebar" aria-label="Close menu" id="close-sidebar">&times;</button>
+            <nav>
+                <a href="#about" class="sidebar-link">About</a>
+                <a href="#skills" class="sidebar-link">Skill</a>
+                <a href="#projects" class="sidebar-link">Project</a>
+                <a href="#testimonials" class="sidebar-link">Testimoni</a>
+                <a href="#additional-projects" class="sidebar-link">Additional</a>
+                <a href="#contact" class="sidebar-link">Contact</a>
+                <button id="sidebar-theme-toggle" class="sidebar-link" aria-label="Toggle theme">🌓</button>
+            </nav>
+        </aside>
     </header>
 
-    <section id="about" tabindex="-1" data-aos="fade-up" aria-labelledby="about-title">
-      <h2 id="about-title">About Me</h2>
-      <p>Saya punya ketertarikan besar pada dunia pengembangan web. Saya suka sekali merancang dan membangun website yang terlihat modern, terasa interaktif saat digunakan, dan tentu saja memiliki estetika yang menarik. Bagi saya, kepuasan pengguna adalah yang terpenting, dan saya selalu berusaha memberikan pengalaman terbaik melalui karya-karya saya.</p>
-    </section>
+    <main class="container" id="hero" tabindex="-1" role="main">
+        <header class="hero" data-aos="fade-up" aria-label="Introduction">
+            <h1>Halo, saya Davanico 👋</h1>
+            <p>Lagi belajar jadi web developer dan UI/UX designer, pengen bikin solusi digital yang kekinian dan ringan.</p>
+            <img src="assets/profile.JPG" alt="Foto Profil Davanico" class="profile-pic" />
+        </header>
 
-    <section id="skills" tabindex="-1" data-aos="fade-up" aria-labelledby="skills-title">
-      <h2 id="skills-title">Skill</h2>
-      <ul>
-        <li>HTML5</li>
-        <li>CSS3</li>
-        <li>JavaScript</li>
-        <li>Figma / UI Design</li>
-        <li>GitHub</li>
-        <li>Corel Draw</li>
-      </ul>
-    </section>
+        <section id="about" tabindex="-1" data-aos="fade-up" aria-labelledby="about-title">
+            <h2 id="about-title">About Me</h2>
+            <p>Saya punya ketertarikan besar pada dunia pengembangan web. Saya suka sekali merancang dan membangun website yang terlihat modern, terasa interaktif saat digunakan, dan tentu saja memiliki estetika yang menarik. Bagi saya, kepuasan pengguna adalah yang terpenting, dan saya selalu berusaha memberikan pengalaman terbaik melalui karya-karya saya.</p>
+        </section>
 
-    <section id="projects" tabindex="-1" data-aos="fade-up" aria-labelledby="projects-title">
-      <h2 id="projects-title">Project</h2>
-      <div class="projects-grid" role="list">
-        <article class="project-card" role="listitem" data-aos="fade-up">
-          <img src="assets/project1.jpg" alt="Design Poster" />
-          <h3>DESIGN POSTER</h3>
-          <p>Selamat datang di design poster saya ini, tempat di mana ide-ide bertemu visual! Setiap poster dibuat untuk tidak hanya enak dipandang, tapi juga mampu menyampaikan pesan secara efektif dan menarik.</p>
-          <a href="project1.html" class="btn-project" aria-label="Lihat detail project Design Poster">Lihat Detail</a>
-        </article>
-        <article class="project-card" role="listitem" data-aos="fade-up">
-          <img src="assets/project2.jpg" alt="Portofolio Pribadi" />
-          <h3>Portofolio Pribadi</h3>
-          <p>Template portofolio pribadi modern dan interaktif, dirancang untuk menampilkan karya secara profesional.</p>
-          <a href="project2.html" class="btn-project" aria-label="Lihat detail project Portofolio Pribadi">Lihat Detail</a>
-        </article>
-        <article class="project-card" role="listitem" data-aos="fade-up">
-          <img src="assets/project3.jpg" alt="UI/UX Aplikasi Mobile" />
-          <h3>UI/UX Aplikasi Mobile</h3>
-          <p>Studi desain UI/UX untuk aplikasi mobile modern dengan fokus pada pengalaman pengguna yang intuitif.</p>
-          <a href="project3.html" class="btn-project" aria-label="Lihat detail project UI UX Aplikasi Mobile">Lihat Detail</a>
-        </article>
-      </div>
-    </section>
+        <section id="skills" tabindex="-1" data-aos="fade-up" aria-labelledby="skills-title">
+            <h2 id="skills-title">Skill</h2>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>Figma / UI Design</li>
+                <li>GitHub</li>
+                <li>Corel Draw</li>
+            </ul>
+        </section>
 
-    <section id="testimonials" tabindex="-1" data-aos="fade-up" aria-labelledby="testimonials-title">
-      <h2 id="testimonials-title">Testimonials</h2>
-      <blockquote class="testimonial">
-        <p>"Davanico adalah seorang profesional yang sangat berbakat. Karyanya selalu memukau dan memenuhi harapan!" - <cite>Client A</cite></p>
-      </blockquote>
-      <blockquote class="testimonial">
-        <p>"Sangat menyenangkan bekerja sama dengan Davanico. Dia selalu memberikan ide-ide segar dan inovatif." - <cite>Client B</cite></p>
-      </blockquote>
-    </section>
+        <section id="projects" tabindex="-1" data-aos="fade-up" aria-labelledby="projects-title">
+            <h2 id="projects-title">Project</h2>
+            <div class="projects-grid" role="list">
+                <article class="project-card" role="listitem" data-aos="fade-up">
+                    <img src="assets/project1.jpg" alt="Design Poster" />
+                    <h3>DESIGN POSTER</h3>
+                    <p>Selamat datang di design poster saya ini, tempat di mana ide-ide bertemu visual! Setiap poster dibuat untuk tidak hanya enak dipandang, tapi juga mampu menyampaikan pesan secara efektif dan menarik.</p>
+                    <a href="project1.html" class="btn-project" aria-label="Lihat detail project Design Poster">Lihat Detail</a>
+                </article>
+                <article class="project-card" role="listitem" data-aos="fade-up">
+                    <img src="assets/project2.jpg" alt="Portofolio Pribadi" />
+                    <h3>Portofolio Pribadi</h3>
+                    <p>Template portofolio pribadi modern dan interaktif, dirancang untuk menampilkan karya secara profesional.</p>
+                    <a href="project2.html" class="btn-project" aria-label="Lihat detail project Portofolio Pribadi">Lihat Detail</a>
+                </article>
+                <article class="project-card" role="listitem" data-aos="fade-up">
+                    <img src="assets/project3.jpg" alt="UI/UX Aplikasi Mobile" />
+                    <h3>UI/UX Aplikasi Mobile</h3>
+                    <p>Studi desain UI/UX untuk aplikasi mobile modern dengan fokus pada pengalaman pengguna yang intuitif.</p>
+                    <a href="project3.html" class="btn-project" aria-label="Lihat detail project UI UX Aplikasi Mobile">Lihat Detail</a>
+                </article>
+            </div>
+        </section>
 
-    <section id="additional-projects" tabindex="-1" data-aos="fade-up" aria-labelledby="additional-projects-title">
-      <h2 id="additional-projects-title">Additional Projects</h2>
-      <div class="additional-projects-grid" role="list">
-        <article class="additional-project-card" role="listitem" data-aos="fade-up">
-          <img src="assets/project4.jpg" alt="Project 4" />
-          <h3>Project 4</h3>
-          <p>Deskripsi singkat tentang proyek 4 yang menunjukkan kemampuan dan kreativitas Anda.</p>
-          <a href="project4.html" class="btn-project" aria-label="Lihat detail project 4">Lihat Detail</a>
-        </article>
-        <article class="additional-project-card" role="listitem" data-aos="fade-up">
-          <img src="assets/project5.jpg" alt="Project 5" />
-          <h3>Project 5</h3>
-          <p>Deskripsi singkat tentang proyek 5 yang menunjukkan kemampuan dan kreativitas Anda.</p>
-          <a href="project5.html" class="btn-project" aria-label="Lihat detail project 5">Lihat Detail</a>
-        </article>
-      </div>
-    </section>
+        <section id="testimonials" tabindex="-1" data-aos="fade-up" aria-labelledby="testimonials-title">
+            <h2 id="testimonials-title">Testimonials</h2>
+            <blockquote class="testimonial">
+                <p>"Davanico adalah seorang profesional yang sangat berbakat. Karyanya selalu memukau dan memenuhi harapan!" - <cite>Client A</cite></p>
+            </blockquote>
+            <blockquote class="testimonial">
+                <p>"Sangat menyenangkan bekerja sama dengan Davanico. Dia selalu memberikan ide-ide segar dan inovatif." - <cite>Client B</cite></p>
+            </blockquote>
+        </section>
 
-    <section id="contact" tabindex="-1" data-aos="fade-up" aria-labelledby="contact-title">
-      <h2 id="contact-title">Kontak</h2>
-      <p>Tertarik untuk berkolaborasi atau sekadar menyapa? Jangan ragu untuk menghubungi saya melalui:</p>
-      <div class="contact-info">
-        <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:davanico.ady@example.com">davanico.ady@example.com</a></p>
-        <p><i class="fab fa-linkedin" aria-hidden="true"></i> <a href="https://www.linkedin.com/in/davanico" target="_blank" rel="noopener noreferrer">Davanico Ady Nugroho</a></p>
-        <p><i class="fab fa-github" aria-hidden="true"></i> <a href="https://github.com/davanico" target="_blank" rel="noopener noreferrer">davanico</a></p>
-      </div>
-    </section>
+        <section id="additional-projects" tabindex="-1" data-aos="fade-up" aria-labelledby="additional-projects-title">
+            <h2 id="additional-projects-title">Additional Projects</h2>
+            <div class="additional-projects-grid" role="list">
+                <article class="additional-project-card" role="listitem" data-aos="fade-up">
+                    <img src="assets/project4.jpg" alt="Project 4" />
+                    <h3>Project 4</h3>
+                    <p>Deskripsi singkat tentang proyek 4 yang menunjukkan kemampuan dan kreativitas Anda.</p>
+                    <a href="project4.html" class="btn-project" aria-label="Lihat detail project 4">Lihat Detail</a>
+                </article>
+                <article class="additional-project-card" role="listitem" data-aos="fade-up">
+                    <img src="assets/project5.jpg" alt="Project 5" />
+                    <h3>Project 5</h3>
+                    <p>Deskripsi singkat tentang proyek 5 yang menunjukkan kemampuan dan kreativitas Anda.</p>
+                    <a href="project5.html" class="btn-project" aria-label="Lihat detail project 5">Lihat Detail</a>
+                </article>
+            </div>
+        </section>
 
-    <!-- Additional Section to lengthen page -->
-    <section id="resources" tabindex="-1" data-aos="fade-up" aria-labelledby="resources-title">
-      <h2 id="resources-title">Resources & Links</h2>
-      <p style="max-width:700px; margin:0 auto; text-align:center; color: var(--text-color); font-size:1rem;">
-        Berikut adalah beberapa sumber belajar dan referensi yang saya gunakan untuk meningkatkan kemampuan saya dalam pengembangan web dan desain UI/UX.
-      </p>
-      <ul style="max-width:700px; margin:1rem auto 3rem auto; list-style: disc; padding-left: 1.25rem; color: var(--secondary-text-color);">
-        <li><a href="https://developer.mozilla.org" target="_blank" rel="noopener" style="color: var(--primary-color); text-decoration: none;">MDN Web Docs</a></li>
-        <li><a href="https://css-tricks.com" target="_blank" rel="noopener" style="color: var(--primary-color); text-decoration: none;">CSS-Tricks</a></li>
-        <li><a href="https://web.dev" target="_blank" rel="noopener" style="color: var(--primary-color); text-decoration: none;">Web.dev</a></li>
-        <li><a href="https://www.figma.com" target="_blank" rel="noopener" style="color: var(--primary-color); text-decoration: none;">Figma</a></li>
-      </ul>
-    </section>
-  </main>
+        <section id="contact" tabindex="-1" data-aos="fade-up" aria-labelledby="contact-title">
+            <h2 id="contact-title">Kontak</h2>
+            <p>Tertarik untuk berkolaborasi atau sekadar menyapa? Jangan ragu untuk menghubungi saya melalui:</p>
+            <div class="contact-info">
+                <p><i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:davanico.ady@example.com">davanico.ady@example.com</a></p>
+                <p><i class="fab fa-linkedin" aria-hidden="true"></i> <a href="https://www.linkedin.com/in/davanico" target="_blank" rel="noopener noreferrer">Davanico Ady Nugroho</a></p>
+                <p><i class="fab fa-github" aria-hidden="true"></i> <a href="https://github.com/davanico" target="_blank" rel="noopener noreferrer">davanico</a></p>
+            </div>
+        </section>
 
-  <footer role="contentinfo">
-    <p>© 2025 Davanico Ady Nugroho. All rights reserved.</p>
-  </footer>
+        <section id="resources" tabindex="-1" data-aos="fade-up" aria-labelledby="resources-title">
+            <h2 id="resources-title">Resources & Links</h2>
+            <p style="max-width:700px; margin:0 auto; text-align:center; color: var(--text-color); font-size:1rem;">
+                Berikut adalah beberapa sumber belajar dan referensi yang saya gunakan untuk meningkatkan kemampuan saya dalam pengembangan web dan desain UI/UX.
+            </p>
+            <ul style="max-width:700px; margin:1rem auto 3rem auto; list-style: disc; padding-left: 1.25rem; color: var(--secondary-text-color);">
+                <li><a href="https://developer.mozilla.org" target="_blank" rel="noopener" style="color: var(--primary-color); text-decoration: none;">MDN Web Docs</a></li>
+                <li><a href="https://css-tricks.com" target="_blank" rel="noopener" style="color: var(--primary-color); text-decoration: none;">CSS-Tricks</a></li>
+                <li><a href="https://web.dev" target="_blank" rel="noopener" style="color: var(--primary-color); text-decoration: none;">Web.dev</a></li>
+                <li><a href="https://www.figma.com" target="_blank" rel="noopener" style="color: var(--primary-color); text-decoration: none;">Figma</a></li>
+            </ul>
+        </section>
+    </main>
 
-  <script src="js/script.js"></script>
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init({ duration: 1000, once: true });
-  </script>
-</body>
+    <footer role="contentinfo">
+        <p>© 2025 Davanico Ady Nugroho. All rights reserved.</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+    </body>
 </html>
