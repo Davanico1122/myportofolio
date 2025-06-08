@@ -246,6 +246,67 @@ body {
   background-color: var(--secondary-color);
 }
 
+/* === Testimonials === */
+#testimonials {
+  margin: 40px 0;
+  padding: 20px;
+  background-color: var(--card-bg);
+  border-radius: 8px;
+}
+
+.testimonial {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-left: 4px solid var(--primary-color);
+  color: var(--secondary-text-color);
+  font-style: italic;
+}
+
+/* === Additional Projects === */
+#additional-projects {
+  margin: 40px 0;
+  padding: 20px;
+}
+
+.additional-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.additional-project-card {
+  background-color: var(--card-bg);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.additional-project-card:hover {
+  transform: translateY(-5px);
+}
+
+.additional-project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  max-height: 180px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.additional-project-card h3 {
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
+  color: var(--primary-color);
+}
+
+.additional-project-card p {
+  font-size: 0.95rem;
+  flex-grow: 1;
+  color: var(--secondary-text-color);
+}
+
 /* === Contact === */
 #contact {
   text-align: center;
@@ -311,34 +372,29 @@ footer {
 }
 
 .back-to-portfolio {
-  /* Properitas yang diubah/ditambahkan untuk menjadikannya tombol */
-  display: inline-block; /* Mengubah dari inline-flex menjadi inline-block untuk kontrol padding yang lebih umum */
-  padding: 10px 20px; /* Jarak di dalam tombol */
-  background-color: var(--primary-color); /* Menggunakan warna primary Anda sebagai latar belakang */
-  color: var(--button-text-color); /* Warna teks tombol, menggunakan variabel Anda */
-  text-decoration: none; /* Menghilangkan garis bawah default tautan */
-  border-radius: 5px; /* Membuat sudut tombol membulat */
-  border: none; /* Menghilangkan border default */
-  cursor: pointer; /* Mengubah kursor menjadi pointer saat diarahkan ke tombol */
-  font-weight: 600; /* Mempertahankan font-weight yang sudah ada */
-  transition: background-color 0.3s ease, color 0.3s ease; /* Transisi untuk hover */
-  margin-bottom: 30px; /* Mempertahankan margin-bottom yang sudah ada */
-
-  /* Reset properti yang mungkin tidak diperlukan lagi untuk tombol */
-  align-items: center; /* Tidak diperlukan lagi dengan display: inline-block */
-  gap: 8px; /* Panah akan ditangani oleh margin-right pada ikonnya */
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: var(--button-text-color);
+  text-decoration: none;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin-bottom: 30px;
 }
 
 .back-to-portfolio i {
-  font-size: 1em; /* Ukuran ikon tetap */
-  margin-right: 8px; /* Memberi jarak antara ikon panah dan teks */
-  color: inherit; /* Menggunakan warna teks tombol, bukan primary-color terpisah */
+  font-size: 1em;
+  margin-right: 8px;
+  color: inherit;
 }
 
 .back-to-portfolio:hover {
-  background-color: var(--secondary-color); /* Warna latar belakang saat di-hover, menggunakan secondary-color Anda */
-  color: var(--button-text-color); /* Memastikan teks tetap putih saat hover */
-  text-decoration: none; /* Memastikan tidak ada garis bawah saat hover */
+  background-color: var(--secondary-color);
+  color: var(--button-text-color);
+  text-decoration: none;
 }
 
 .project-hero {
@@ -466,4 +522,4 @@ footer {
   .poster-item img { height: 200px; }
   .project-detail-content { padding: 0 15px; }
   .project-links { flex-direction: column; gap: 10px; }
-}
+                   }
