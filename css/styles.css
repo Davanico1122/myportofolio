@@ -32,8 +32,7 @@
     box-sizing: border-box;
 }
 html {
-    /* Pastikan scroll-behavior di html agar berlaku di semua halaman */
-    scroll-behavior: smooth; 
+    scroll-behavior: smooth;
 }
 body {
     margin: 0;
@@ -42,15 +41,14 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transisi untuk tema */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-    /* Sesuaikan padding atas/bawah agar tidak terlalu mepet dengan navbar/footer */
-    padding: 5rem 0 6rem; 
+    padding: 5rem 0 6rem;
 }
 
 /* --- Navbar --- */
@@ -62,7 +60,7 @@ body {
     height: 56px;
     background-color: var(--bg-color);
     box-shadow: 0 2px 8px var(--border-color);
-    /* backdrop-filter: saturate(180%) blur(10px); - Pastikan ini tidak menyebabkan masalah performa pada browser lama */
+    backdrop-filter: saturate(180%) blur(10px);
     z-index: 9999;
     padding: 0 1.5rem;
     display: flex;
@@ -78,7 +76,7 @@ body {
 }
 
 .nav-links {
-    display: none; /* Default untuk mobile */
+    display: none;
 }
 
 /* --- Tombol Hamburger Menu --- */
@@ -92,7 +90,7 @@ body {
     justify-content: space-around;
     cursor: pointer;
     padding: 0;
-    z-index: 10001; /* Pastikan di atas sidebar saat terbuka */
+    z-index: 10001;
 }
 .menu-toggle span {
     width: 100%;
@@ -116,7 +114,7 @@ body {
 .sidebar-menu {
     position: fixed;
     top: 0;
-    right: -260px; /* Sembunyikan ke kanan */
+    right: -260px;
     width: 260px;
     height: 100vh;
     background-color: var(--bg-color);
@@ -125,20 +123,19 @@ body {
     display: flex;
     flex-direction: column;
     transition: right 0.3s ease;
-    z-index: 11000; /* Pastikan di atas semua elemen lain */
-    outline: none; /* Menghilangkan outline default */
+    z-index: 11000;
+    outline: none;
 }
 .sidebar-menu.open {
-    right: 0; /* Tampilkan */
+    right: 0;
 }
 .sidebar-menu nav {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     margin-top: 3rem;
-    flex-grow: 1; /* Agar elemen di bawahnya dorong ke bawah */
+    flex-grow: 1;
 }
-/* Menargetkan class 'sidebar-link' yang sudah disinkronkan di HTML */
 .sidebar-link {
     color: var(--primary-color);
     font-weight: 600;
@@ -150,9 +147,9 @@ body {
     text-align: left;
     cursor: pointer;
     user-select: none;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Tambah transisi warna */
-    text-decoration: none; /* Hilangkan underline pada link */
-    display: block; /* Agar setiap link menjadi block dan memenuhi ruang */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+    display: block;
 }
 .sidebar-link:hover,
 .sidebar-link:focus-visible {
@@ -162,8 +159,7 @@ body {
     outline: 2px solid var(--primary-color);
 }
 
-/* Tombol Tutup Sidebar - Konsistenkan ID */
-.close-sidebar { /* Menggunakan ID yang sudah disinkronkan di HTML */
+.close-sidebar {
     align-self: flex-end;
     font-size: 1.5rem;
     background: none;
@@ -180,13 +176,13 @@ body {
 /* Desktop Navigation (min-width: 769px) */
 @media(min-width: 769px) {
     .menu-toggle {
-        display: none; /* Sembunyikan hamburger di desktop */
+        display: none;
     }
     .sidebar-menu {
-        display: none; /* Sembunyikan sidebar di desktop */
+        display: none;
     }
     .nav-links {
-        display: flex; /* Tampilkan nav-links di desktop */
+        display: flex;
         gap: 2rem;
         list-style: none;
         margin: 0;
@@ -206,11 +202,10 @@ body {
         color: var(--secondary-color);
         outline: none;
     }
-    /* Tombol tema di desktop nav */
     #theme-toggle {
         background: none;
         border: none;
-        font-size: 1.5rem; /* Ukuran ikon bulan/matahari */
+        font-size: 1.5rem;
         cursor: pointer;
         color: var(--primary-color);
         transition: color 0.3s ease;
@@ -220,7 +215,6 @@ body {
         color: var(--secondary-color);
     }
 }
-
 
 /* --- Hero Section --- */
 .hero {
@@ -252,8 +246,7 @@ body {
     object-fit: cover;
     margin: 2rem auto 0 auto;
     border: 3px solid var(--primary-color);
-    /* Shadow warna menyesuaikan primary-color yang bisa berubah di dark mode */
-    box-shadow: 0 4px 12px rgba(var(--primary-color-rgb, 139, 92, 246), 0.4); 
+    box-shadow: 0 4px 12px rgba(var(--primary-color-rgb, 139, 92, 246), 0.4);
     transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
     display: block;
 }
@@ -307,7 +300,7 @@ h2 {
 
 /* --- Projects Section dan Additional Projects Section --- */
 .projects-grid,
-.additional-projects-grid { /* Gabungkan styling grid */
+.additional-projects-grid {
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -316,7 +309,7 @@ h2 {
 }
 
 .project-card,
-.additional-project-card { /* Gabungkan styling card */
+.additional-project-card {
     background-color: var(--card-bg);
     border-radius: 0.75rem;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -331,7 +324,7 @@ h2 {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 .project-card img,
-.additional-project-card img { /* Gabungkan styling gambar */
+.additional-project-card img {
     width: 100%;
     max-height: 140px;
     object-fit: cover;
@@ -339,13 +332,13 @@ h2 {
     transition: border-color 0.3s ease;
 }
 .project-card h3,
-.additional-project-card h3 { /* Gabungkan styling judul card */
+.additional-project-card h3 {
     font-size: 1.3rem;
     margin: 0.8rem 1rem 0.3rem 1rem;
     color: var(--primary-color);
 }
 .project-card p,
-.additional-project-card p { /* Gabungkan styling paragraf card */
+.additional-project-card p {
     flex-grow: 1;
     margin: 0 1rem 1rem 1rem;
     color: var(--secondary-text-color);
@@ -353,7 +346,6 @@ h2 {
     line-height: 1.4;
 }
 
-/* Tombol Detail Proyek (berlaku untuk semua) */
 .btn-project {
     margin: 0 1rem 1rem 1rem;
     padding: 0.6rem 1.2rem;
@@ -373,7 +365,7 @@ h2 {
 .btn-project:hover {
     background-color: var(--secondary-color);
 }
-.btn-project.secondary { /* Gaya untuk tombol sekunder */
+.btn-project.secondary {
     background-color: transparent;
     color: var(--primary-color);
     border: 1px solid var(--primary-color);
@@ -468,21 +460,15 @@ footer {
 
 
 /* --- Project Detail Page Specific Styles --- */
-/* Menargetkan class body spesifik untuk halaman detail project */
-.project-detail-page .navbar {
-    /* Jika Anda ingin navbar di halaman detail berbeda, bisa override di sini */
-    /* Misalnya, tidak ada backdrop-filter, atau shadow berbeda */
-}
-
 .project-detail-page .container {
-    padding-top: 2rem; /* Kurangi padding atas di halaman detail agar tidak terlalu jauh dari navbar */
+    padding-top: 2rem;
 }
 
 .back-to-portfolio {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    margin-top: 1.5rem; /* Memberi jarak dari navbar */
+    margin-top: 1.5rem;
     margin-bottom: 2rem;
     color: var(--primary-color);
     text-decoration: none;
@@ -518,7 +504,7 @@ footer {
     gap: 1.5rem;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     justify-content: center;
-    align-items: start; /* Mengatur item agar sejajar di bagian atas */
+    align-items: start;
 }
 
 .poster-item {
@@ -536,7 +522,7 @@ footer {
 }
 .poster-item img {
     width: 100%;
-    height: 200px; /* Atur tinggi gambar agar konsisten di galeri detail */
+    height: 200px;
     object-fit: cover;
     border-bottom: 1px solid var(--border-color);
 }
@@ -545,7 +531,7 @@ footer {
     font-size: 0.9rem;
     color: var(--secondary-text-color);
     text-align: center;
-    flex-grow: 1; /* Agar caption bisa mengambil sisa ruang dan rata bawah */
+    flex-grow: 1;
     margin: 0;
 }
 
@@ -606,7 +592,7 @@ footer {
 
 @media (min-width: 769px) {
     .container {
-        padding: 7rem 0 8rem; /* Lebih banyak padding di desktop */
+        padding: 7rem 0 8rem;
     }
     .hero {
         padding-top: 6rem;
@@ -623,13 +609,13 @@ footer {
         height: 160px;
     }
     .project-detail-page .container {
-        padding-top: 4rem; /* Lebih banyak padding atas di halaman detail desktop */
+        padding-top: 4rem;
     }
     .project-hero h1 {
         font-size: 3.5rem;
     }
     .poster-item img {
-        height: 250px; /* Tinggi gambar lebih besar di desktop */
+        height: 250px;
     }
 }
 
@@ -643,15 +629,15 @@ footer {
     }
     .project-card img,
     .additional-project-card img,
-    .poster-item img { /* Sesuaikan tinggi gambar di mobile */
+    .poster-item img {
         max-height: 150px;
-        height: 150px; /* Pastikan tinggi konsisten */
+        height: 150px;
     }
     .container {
-        padding: 4rem 0 5rem; /* Kurangi padding untuk mobile */
+        padding: 4rem 0 5rem;
     }
     .project-detail-page .container {
-        padding-top: 2rem; /* Kurangi padding atas di halaman detail mobile */
+        padding-top: 2rem;
     }
     h2 {
         font-size: 2rem;
@@ -682,14 +668,14 @@ footer {
         font-size: 1.8rem;
     }
     .poster-gallery {
-        grid-template-columns: 1fr; /* Satu kolom di layar sangat kecil */
+        grid-template-columns: 1fr;
     }
     .contact-info {
         flex-direction: column;
         gap: 1rem;
     }
     .btn-project {
-        width: 100%; /* Tombol memenuhi lebar di mobile kecil */
+        width: 100%;
         margin-left: 0;
         margin-right: 0;
     }
